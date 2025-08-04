@@ -35,6 +35,7 @@ Carpeta del proyecto en R
  ┃ ┃ ┣ 📄ENSU_CB_1222.csv
  ┃ ┃ ┣ 📄ENSU_CB_1222.csv
  ┃ ┃ ┣ 📄ENSU_CB_1224.csv
+ ┃ ┃ ┗ 📄nm_cd.csv
  ┣ 📄ENSU.Rproj
  ┣ 📄funciones.Rmd #crea y guarda ensu_funciones.RData
  ┣ 📄ensu_funciones.RData
