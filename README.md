@@ -8,7 +8,7 @@
 
 ## AVISO
 
-- Todos los archivos contenidos en la carpeta `./INEGI/` se presentan tal cual están en el sitio del Instituto Nacional de Estadística y Geografía (INEGI). No obstante, solo el archivo `./INEGI/datos/2019-2025/nm_cd.csv` tuvo una ligera modificación al presentado en el segundo trimestre de la ENSU, dado que en lo que respecta a las Alcaldías de la Ciudad de México, estas tenían un espacio al final de sus nombres, por ejemplo: "Azcapotzalco ".
+- Todos los archivos contenidos en la carpeta `./INEGI/` se presentan tal cual están en el sitio del Instituto Nacional de Estadística y Geografía (INEGI), cambiando la nomenclatura de los archivos descargables a nombres más resumidos como ensu1t25, que en breve significa ensu(número de trimestre)t(año a dos dígitos). No obstante, solo el archivo `./INEGI/datos/2019-2025/nm_cd.csv` tuvo una ligera modificación al presentado en el segundo trimestre de la ENSU, dado que en lo que respecta a las Alcaldías de la Ciudad de México, estas tenían un espacio al final de sus nombres, por ejemplo: "Azcapotzalco ".
 - Para una mejor replicabilidad y reproducibilidad del código presentado, no se deben de modificar las funciones aquí presentadas, siendo la más importante: `cargar_ensu` como la primer función a ejecutarse una vez descargados los archivos.
 - La estructura de las carpetas debe de ser la siguiente:
 ```
