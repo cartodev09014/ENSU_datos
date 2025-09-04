@@ -8,8 +8,8 @@
 
 ## AVISO
 
-- Todos los archivos contenidos en la carpeta `./INEGI/` se presentan tal cual están en el sitio del Instituto Nacional de Estadística y Geografía (INEGI), cambiando la nomenclatura de los archivos descargables a nombres más resumidos como ensu1t25, que en breve significa ensu(número de trimestre)t(año a dos dígitos). No obstante, el archivo `./INEGI/datos/2019-2025/nm_cd.csv` tuvo una ligera modificación al presentado en el segundo trimestre de la ENSU, dado que en lo que respecta a las Alcaldías de la Ciudad de México, estas tenían un espacio al final de sus nombres, por ejemplo: "Azcapotzalco ", además, se complementó el catálogo con todas las ciudades que han ido evaluadas en la ENSU desde el 2019, generando un solo catálogo.
-- Para una mejor replicabilidad y reproducibilidad del código presentado, no se deben de modificar las funciones aquí presentadas, siendo la más importante: `cargar_ensu` como la primer función a ejecutarse una vez descargados los archivos con el nombre tal y como está especificado en la ruta `./INEGI/datos/2019-2025/.`
+- Todos los archivos contenidos en la carpeta `./INEGI/` se presentan tal cual están en el sitio del Instituto Nacional de Estadística y Geografía (INEGI), cambiando la nomenclatura de los archivos descargables a nombres más resumidos como ensu1t25, que en breve significa ensu(número de trimestre)t(año a dos dígitos). No obstante, el archivo `./INEGI/datos/2019-2025/nm_cd.csv` se modificó al presentado en el segundo trimestre de la ENSU, dado que en lo que respecta a las Alcaldías de la Ciudad de México, estas tenían un espacio al final de sus nombres, por ejemplo: "Azcapotzalco ", además, se complementó el catálogo con todas las ciudades que han ido evaluadas en la ENSU desde el 2019, generando un solo catálogo. También se agregó una columna para abreviar el nombre de la Ciudad (conforme a los nombres empleados en los mapas de los reportes de la ENSU, especificamente en el empleado en el 4to trimestre del 2024, páginas 6 a 8).
+- Para una mejor replicabilidad y reproducibilidad se deben de descargar los archivos tal y como están especificados en la ruta `./INEGI/datos/2019-2025/.`
 - La estructura de las carpetas y el proyecto en R, debe de ser la siguiente:
 ```
 Carpeta del proyecto en R
@@ -50,24 +50,21 @@ Carpeta del proyecto en R
  ┃ ┃ ┣ 📄ENSU_CS_1219.csv
  ┃ ┃ ┗ 📄nm_cd.csv
  ┣ 📄ENSU.Rproj
- ┣ 📄funciones_ensu.Rmd #crea y guarda ensu_funciones_final.RData
- ┣ 📄ensu_funciones_final.RData
- ┣ 📄carga_datos.Rmd #crea y guarda ensu_datos.RData
- ┣ 📄ensu_datos.RData
- ┣ 📄ensu_funciones_cdmx.Rmd #crea y guarda ensu_cdmx.RData
- ┣ 📄ensu_cdmx.RData
- ┗ 📄dashboard.Rmd #carga ensu_funciones_final.RData, ensu_datos.RData y ensu_cdmx.RData
+ ┣ 📄carga_datos.Rmd
+ ┣ 📄ensu_reset.RData
+ ┣ 📄setup_book.R
+ ┗ 📄Los .qmd existentes de cada capítulo del reporte
 ```
 - Al momento de la creación de los códigos y funciones empleadas, la sesión de R era:
 
 ```
 > sessionInfo()
-R version 4.4.2 (2024-10-31 ucrt)
+R version 4.5.1 (2025-06-13 ucrt)
 Platform: x86_64-w64-mingw32/x64
 Running under: Windows 11 x64 (build 26100)
 
 Matrix products: default
-
+  LAPACK version 3.12.1
 
 locale:
 [1] LC_COLLATE=Spanish_Mexico.utf8  LC_CTYPE=Spanish_Mexico.utf8   
@@ -78,27 +75,15 @@ time zone: America/Mexico_City
 tzcode source: internal
 
 attached base packages:
-[1] tools     grid      stats     graphics  grDevices utils     datasets  methods  
-[9] base     
+[1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] gridExtra_2.3     car_3.1-3         carData_3.0-5     tibble_3.2.1     
- [5] htmlwidgets_1.6.4 stringr_1.5.1     crosstalk_1.2.1   plotly_4.11.0    
- [9] ggplot2_3.5.2     tidyr_1.3.1       rlang_1.1.6       descr_1.1.8      
-[13] survey_4.4-2      survival_3.7-0    Matrix_1.7-1      dplyr_1.1.4      
-[17] data.table_1.17.8
+[1] usethis_3.2.0
 
 loaded via a namespace (and not attached):
- [1] sass_0.4.9          generics_0.1.4      stringi_1.8.7       lattice_0.22-6     
- [5] digest_0.6.37       magrittr_2.0.3      evaluate_1.0.4      RColorBrewer_1.1-3 
- [9] fastmap_1.2.0       jsonlite_1.8.9      Formula_1.2-5       DBI_1.2.3          
-[13] httr_1.4.7          purrr_1.1.0         viridisLite_0.4.2   scales_1.4.0       
-[17] jquerylib_0.1.4     lazyeval_0.2.2      abind_1.4-8         cli_3.6.3          
-[21] mitools_2.4         splines_4.4.2       cachem_1.1.0        withr_3.0.2        
-[25] yaml_2.3.10         vctrs_0.6.5         R6_2.6.1            lifecycle_1.0.4    
-[29] pkgconfig_2.0.3     bslib_0.9.0         pillar_1.11.0       gtable_0.3.6       
-[33] glue_1.8.0          Rcpp_1.0.14         xfun_0.52           tidyselect_1.2.1   
-[37] rstudioapi_0.17.1   knitr_1.50          dichromat_2.0-0.1   farver_2.1.2       
-[41] xtable_1.8-4        htmltools_0.5.8.1   rmarkdown_2.29      compiler_4.4.2     
-[45] flexdashboard_0.6.2
+ [1] digest_0.6.37     fastmap_1.2.0     xfun_0.52         magrittr_2.0.3   
+ [5] glue_1.8.0        knitr_1.50        htmltools_0.5.8.1 rmarkdown_2.29   
+ [9] lifecycle_1.0.4   cli_3.6.5         vctrs_0.6.5       compiler_4.5.1   
+[13] purrr_1.1.0       rstudioapi_0.17.1 tools_4.5.1       evaluate_1.0.4   
+[17] yaml_2.3.10       rlang_1.1.6       fs_1.6.6 
 ```
