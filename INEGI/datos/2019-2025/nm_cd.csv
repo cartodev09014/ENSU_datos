@@ -1,95 +1,95 @@
-﻿CD,descrip
-01,Aguascalientes
-02,Mexicali
-03,Tijuana
-04,La Paz
-05,San Francisco Campeche
-06,Saltillo
-07,La Laguna
-08,Piedras Negras
-09,Colima
-10,Manzanillo
-11,Tuxtla Gutiérrez
-12,Tapachula
-13,Chihuahua
-14,Ciudad Juárez
-"15",CDMX Norte
-"16",CDMX Sur
-"17",CDMX Oriente
-"18",CDMX Poniente
-19,Durango
-20,León
-21,Acapulco
-22,Chilpancingo de los Bravo
-23,Pachuca
-25,Puerto Vallarta
-26,Toluca
-27,Ecatepec de Morelos
-28,Ciudad Nezahualcóyotl
-29,Morelia
-30,Uruapan
-31,Lázaro Cárdenas
-32,Cuernavaca
-33,Tepic
-35,Oaxaca
-36,Puebla
-37,Querétaro
-38,Cancún
-39,San Luis Potosí
-40,Culiacán
-41,Mazatlán
-42,Los Mochis
-43,Hermosillo
-44,Nogales
-45,Villahermosa
-46,Tampico
-47,Reynosa
-48,Nuevo Laredo
-49,Tlaxcala
-50,Veracruz
-51,Coatzacoalcos
-52,Mérida
-53,Zacatecas
-54,Fresnillo
-55,Los Cabos
-56,Ciudad del Carmen
-57,Guanajuato
-58,Ixtapa-Zihuatanejo
-59,Guadalajara
-60,Tonalá
-61,Tlajomulco de Zúñiga
-62,San Pedro Tlaquepaque
-63,Zapopan
-64,Monterrey
-65,San Pedro Garza García
-66,Apodaca
-67,Guadalupe
-68,Gral. Escobedo
-69,San Nicolás de los Garza
-70,Santa Catarina
-71,Azcapotzalco
-72,Coyoacán
-73,Cuajimalpa de Morelos
-74,Gustavo A. Madero
-75,Iztacalco
-76,Iztapalapa
-77,La Magdalena Contreras
-78,Milpa Alta
-79,Álvaro Obregón
-80,Tláhuac
-81,Tlalpan
-82,Xochimilco
-83,Benito Juárez
-84,Cuauhtémoc
-85,Miguel Hidalgo
-86,Venustiano Carranza
-87,Tlalnepantla de Baz
-88,Naucalpan de Juárez
-89,Cuautitlán Izcalli
-90,Atizapán
-91,Chimalhuacán
-92,Irapuato
-93,Chetumal
-94,Ciudad Obregón
-95,Ciudad Victoria
-96,Xalapa
+CD,descrip,NOM_ABR,Latitude,Longitude,CVE_ENT,NOM_ENT
+1,Aguascalientes,AGS,21.87982664,-102.2960186,1,Aguascalientes
+2,Mexicali,MXL,32.6396574,-115.4749617,2,Baja California
+3,Tijuana,TIJ,32.53255528,-117.018969,2,Baja California
+4,La Paz,LA PAZ,24.12389151,-110.315137,3,Baja California Sur
+5,San Francisco Campeche,CAMP,19.84530057,-90.53959535,4,Campeche
+6,Saltillo,SAL,25.42191686,-101.0010001,5,Coahuila de Zaragoza
+7,La Laguna,LAG,25.57491621,-103.4961197,5,Coahuila de Zaragoza
+8,Piedras Negras,PNG,28.70804107,-100.5284538,5,Coahuila de Zaragoza
+9,Colima,COL,19.24295617,-103.7282323,6,Colima
+10,Manzanillo,MZLLO,19.05327601,-104.3163792,6,Colima
+11,Tuxtla Gutiérrez,TUXTLA,16.75355957,-93.11495461,7,Chiapas
+12,Tapachula,TAP,14.91113957,-92.26430792,7,Chiapas
+13,Chihuahua,CHIH,28.63899855,-106.0732099,8,Chihuahua
+14,Ciudad Juárez,JUAREZ,31.74650222,-106.4849178,8,Chihuahua
+15,CDMX Norte,CDMX-N,19.44369516,-99.10157186,9,Ciudad de México
+16,CDMX Sur,CDMX-S,19.36680999,-99.17544565,9,Ciudad de México
+17,CDMX Oriente,CDMX-O,19.34998652,-99.11048766,9,Ciudad de México
+18,CDMX Poniente,CDMX-P,19.43096357,-99.18308777,9,Ciudad de México
+19,Durango,DGO,24.0277239,-104.6716949,10,Durango
+20,León,LEON,21.12200925,-101.6831962,11,Guanajuato
+21,Acapulco,ACAP,16.86189921,-99.88658105,12,Guerrero
+22,Chilpancingo de los Bravo,CHIL,17.52856546,-99.49477403,12,Guerrero
+23,Pachuca,PACH,20.12254811,-98.73674707,13,Hidalgo
+25,Puerto Vallarta,PVALL,20.60882449,-105.2355359,14,Jalisco
+26,Toluca,TOL,19.29347385,-99.65715025,15,México
+27,Ecatepec de Morelos,ECAP,19.59909511,-99.04911331,15,México
+28,Ciudad Nezahualcóyotl,NEZA,19.40864412,-99.01834196,15,México
+29,Morelia,MOR,19.70184761,-101.1952944,16,Michoacán de Ocampo
+30,Uruapan,URU,19.42159276,-102.0477289,16,Michoacán de Ocampo
+31,Lázaro Cárdenas,L.CAR,17.96255877,-102.1982333,16,Michoacán de Ocampo
+32,Cuernavaca,CUER,18.92197073,-99.23476218,17,Morelos
+33,Tepic,TEPIC,21.51250324,-104.8931425,18,Nayarit
+35,Oaxaca,OAX,17.06032908,-96.72559197,20,Oaxaca
+36,Puebla,PUE,19.04398588,-98.19748824,21,Puebla
+37,Querétaro,QRO,20.59362288,-100.3901867,22,Querétaro
+38,Cancún,CANCUN,21.16149588,-86.82468283,23,Quintana Roo
+39,San Luis Potosí,SLP,22.15171944,-100.977067,24,San Luis Potosí
+40,Culiacán,CUL,24.80711758,-107.3938898,25,Sinaloa
+41,Mazatlán,MZT,23.20036042,-106.4223096,25,Sinaloa
+42,Los Mochis,MOCH,25.78369213,-108.9937297,25,Sinaloa
+43,Hermosillo,HMO,29.07489868,-110.9584118,26,Sonora
+44,Nogales,NOG,31.32588869,-110.9457173,26,Sonora
+45,Villahermosa,VHSA,17.99896162,-92.94473826,27,Tabasco
+46,Tampico,TAMP,22.21602377,-97.85823394,28,Tamaulipas
+47,Reynosa,REYNOSA,26.09237768,-98.27806151,28,Tamaulipas
+48,Nuevo Laredo,LAR,27.48664714,-99.50870254,28,Tamaulipas
+49,Tlaxcala,TLAX,19.31743218,-98.23756274,29,Tlaxcala
+50,Veracruz,VER,19.20058023,-96.13791935,30,Veracruz de Ignacio de la Llave
+51,Coatzacoalcos,COATZA,18.14715989,-94.41707559,30,Veracruz de Ignacio de la Llave
+52,Mérida,MER,20.96720221,-89.624478,31,Yucatán
+53,Zacatecas,ZAC,22.77408764,-102.5872121,32,Zacatecas
+54,Fresnillo,FRES,23.17585005,-102.8682083,32,Zacatecas
+55,Los Cabos,LOS CABOS,23.06165326,-109.6946356,3,Baja California Sur
+56,Ciudad del Carmen,CD.CAR,18.63781518,-91.83622297,4,Campeche
+57,Guanajuato,GTO,21.00351518,-101.2437376,11,Guanajuato
+58,Ixtapa-Zihuatanejo,IXT,17.65186939,-101.5486115,12,Guerrero
+59,Guadalajara,GDL,20.67619016,-103.3464427,14,Jalisco
+60,Tonalá,TONALA,20.62462842,-103.2424232,14,Jalisco
+61,Tlajomulco de Zúñiga,TLAJ,20.47537874,-103.4415903,14,Jalisco
+62,San Pedro Tlaquepaque,TLAQ,20.63928952,-103.3107215,14,Jalisco
+63,Zapopan,ZAP,20.72179527,-103.3898889,14,Jalisco
+64,Monterrey,MTY,25.66486803,-100.3108001,19,Nuevo León
+65,San Pedro Garza García,S.PEDR,25.66516188,-100.4024485,19,Nuevo León
+66,Apodaca,APODACA,25.78741717,-100.1812344,19,Nuevo León
+67,Guadalupe,GPE,25.67655264,-100.259318,19,Nuevo León
+68,Gral. Escobedo,ESCOBEDO,25.8080288,-100.3225491,19,Nuevo León
+69,San Nicolás de los Garza,S.NICO,25.75528513,-100.2896433,19,Nuevo León
+70,Santa Catarina,STA.CAT,25.67520795,-100.4599303,19,Nuevo León
+71,Azcapotzalco,AZCAP,19.48411575,-99.18427012,9,Ciudad de México
+72,Coyoacán,COYO,19.35032987,-99.16231223,9,Ciudad de México
+73,Cuajimalpa de Morelos,CUAJ,19.3573245,-99.2996927,9,Ciudad de México
+74,Gustavo A. Madero,GAM,19.48461121,-99.12707015,9,Ciudad de México
+75,Iztacalco,IZTC,19.39578356,-99.09749432,9,Ciudad de México
+76,Iztapalapa,IZTP,19.35908016,-99.09274633,9,Ciudad de México
+77,La Magdalena Contreras,M.CONT,19.30490883,-99.24159092,9,Ciudad de México
+78,Milpa Alta,M.ALTA,19.19148012,-99.02349985,9,Ciudad de México
+79,Álvaro Obregón,A.OBR,19.39027044,-99.19913651,9,Ciudad de México
+80,Tláhuac,TLHC,19.27057905,-99.00494591,9,Ciudad de México
+81,Tlalpan,TLALP,19.2884103,-99.16738033,9,Ciudad de México
+82,Xochimilco,XOCH,19.26365222,-99.10491509,9,Ciudad de México
+83,Benito Juárez,B.JRZ,19.37206358,-99.15775723,9,Ciudad de México
+84,Cuauhtémoc,CUAUH,19.44163127,-99.15184953,9,Ciudad de México
+85,Miguel Hidalgo,M.HGO,19.4073176,-99.19092204,9,Ciudad de México
+86,Venustiano Carranza,V.CAR,19.41935754,-99.11312465,9,Ciudad de México
+87,Tlalnepantla de Baz,TLALNE,19.53855575,-99.19525466,15,México
+88,Naucalpan de Juárez,NAUC,19.47807209,-99.2337622,15,México
+89,Cuautitlán Izcalli,C.IZCALLI,19.66520147,-99.17871163,15,México
+90,Atizapán,ATZPN,19.54320206,-99.23507573,15,México
+91,Chimalhuacán,CHIMAL,19.416861,-98.94533273,15,México
+92,Irapuato,IRAP,20.67270878,-101.3475587,11,Guanajuato
+93,Chetumal,CHETUMAL,18.49376971,-88.29783962,23,Quintana Roo
+94,Ciudad Obregón,CD.OBR,27.49707201,-109.9322447,26,Sonora
+95,Ciudad Victoria,CD.VICT,23.7308371,-99.15135035,28,Tamaulipas
+96,Xalapa,XAL,19.52729977,-96.92390779,30,Veracruz de Ignacio de la Llave
