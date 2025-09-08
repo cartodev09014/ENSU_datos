@@ -170,6 +170,26 @@
     ]
   },
   {
+    "objectID": "libro/expectativas.html",
+    "href": "libro/expectativas.html",
+    "title": "4  Expectativa social sobre seguridad pública",
+    "section": "",
+    "text": "4.1 2019 a 2025 a Nivel Nacional\nLa tercera pregunta de la ENSU, consiste en:\n“Pensando en las condiciones de delinciencia en (CIUDAD), ¿Considera que en los próximos 12 meses…?\nPermitiendo las respuestas: mejorará, seguirá igual de bien, seguirá igual de mal, empeorará y No sabe / no responde.\nDe acuerdo con el reporte del segundo trimestre de 2025, el 32.5% de los encuestados consideró que la situación de delincuencia “seguirá igual de mal”, 25.4% consideró que empeorará. Además de enfatizar el hecho de que, al menos a nivel nacional, la expectativa de que la condición de delincuencia “Mejorará” han disminuido en al menos 4 puntos porcentuales desde el cuarto trimestre del 2024, mientras que de forma inversamente proporcional, la opinión de que “Empeorará” ha aumentado en casi 8 puntos porcentuales desde el segundo trimestre del 2024.\nLos resultados pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 2.Com_expectativas_MES_ANIO_est.\nA continuación se muestran los gráficos de dichas respuestas desde 2019 a nivel Nacional.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Expectativa social sobre seguridad pública</span>"
+    ]
+  },
+  {
+    "objectID": "libro/expectativas.html#a-2025-a-nivel-nacional",
+    "href": "libro/expectativas.html#a-2025-a-nivel-nacional",
+    "title": "4  Expectativa social sobre seguridad pública",
+    "section": "",
+    "text": "4.1.1 Expecativas de acuerdo al género\nSi bien a primera vista, las expectativas sobre las condiciones de delincuencia, entre géneros parecen ser iguales, como “Seguirá igual de mal” que es la que tiene mayor porcentaje, o que “Seguirá igual de bien” aumenta conforme el tiempo. Respecto a los géneros, los hombres mantienen una preferencia hacia que las condiciones “Mejorarán” (aunque en los primeros dos trimestre del 2025 parece ir a la baja), mientras que las mujeres hasta antes del 2024 parecían tener una mayor tendencía hacia la condición “Empeorará”.\n\n4.1.1.1 Hombres\n\n\n\n\n\n\n\n\n4.1.1.2 Mujeres",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Expectativa social sobre seguridad pública</span>"
+    ]
+  },
+  {
     "objectID": "libro/references.html",
     "href": "libro/references.html",
     "title": "Referencias",
@@ -177,6 +197,16 @@
     "text": "INEGI. 2025. “Encuesta Nacional de Seguridad Pública Urbana\n(ENSU), Primer Trimestre de 2019 a Segundo Trimestre de 2025.”\nENSU. https://www.inegi.org.mx/programas/ensu/.",
     "crumbs": [
       "Referencias"
+    ]
+  },
+  {
+    "objectID": "libro/expectativas.html#a-2025-a-nivel-nacional-por-ciudades-de-interés-y-género",
+    "href": "libro/expectativas.html#a-2025-a-nivel-nacional-por-ciudades-de-interés-y-género",
+    "title": "4  Expectativa social sobre seguridad pública",
+    "section": "4.2 2019 a 2025 a Nivel Nacional por ciudades de interés y género",
+    "text": "4.2 2019 a 2025 a Nivel Nacional por ciudades de interés y género\nComo ya se ha visto en apartados anteriores, así como las condiciones cambian respecto a los géneros, también lo hacen conforme a ciudades y géneros, ya que esta pregunta no tiene el mismo impacto para un habitante en “San Pedro Garza García, N.L.” que a uno de “Culiacán, Sin.”, sin mencionar que incluso la visión desde un género puede ser también distinta. A continuación, se dejan los gráficos correspondientes respecto a las ciudades y géneros.\n\n4.2.1 Ciudades de interés\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n4.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades (respecto a los hombres) se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n4.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades (respecto a las mujeres) se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Expectativa social sobre seguridad pública</span>"
     ]
   }
 ]
