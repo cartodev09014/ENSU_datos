@@ -8,7 +8,7 @@
 
 ## AVISO
 
-- Todos los archivos contenidos en la carpeta `./INEGI/` se presentan tal cual están en el sitio del Instituto Nacional de Estadística y Geografía (INEGI), cambiando la nomenclatura de los archivos descargables a nombres más resumidos como ensu1t25, que en breve significa ensu(número de trimestre)t(año a dos dígitos). No obstante, el archivo `./INEGI/datos/2019-2025/nm_cd.csv` se modificó al presentado en el segundo trimestre de la ENSU, dado que en lo que respecta a las Alcaldías de la Ciudad de México, estas tenían un espacio al final de sus nombres, por ejemplo: "Azcapotzalco ", además, se complementó el catálogo con todas las ciudades que han ido evaluadas en la ENSU desde el 2019, generando un solo catálogo. También se agregó una columna para abreviar el nombre de la Ciudad (conforme a los nombres empleados en los mapas de los reportes de la ENSU, especificamente en el empleado en el 4to trimestre del 2024, páginas 6 a 8). Los datos de la latitud y longitud son aproximados y no representan la realidad, se agregaron para proyectos futuros en la creación de mapas y no tienen nada que ver con lo presentado por el INEGI. Finalmente, se agregaron las columnas CVE_ENT y NOM_ENT, que buscan asignar el estado de la ciudad de interés.
+- Todos los archivos contenidos en la carpeta `./INEGI/` se presentan tal cual están en el sitio del Instituto Nacional de Estadística y Geografía (INEGI), cambiando la nomenclatura de los archivos descargables a nombres más resumidos como ensu1t25, que en breve significa ensu(número de trimestre)t(año a dos dígitos). No obstante, el archivo `./INEGI/datos/2019-2025/nm_cd.csv` se modificó al presentado en el segundo trimestre de la ENSU, dado que en lo que respecta a las Alcaldías de la Ciudad de México, estas tenían un espacio al final de sus nombres, por ejemplo: "Azcapotzalco ", además, se complementó el catálogo con todas las ciudades que han ido evaluadas en la ENSU desde el 2019, generando un solo catálogo. También se agregó una columna para abreviar el nombre de la Ciudad (conforme a los nombres empleados en los mapas de los reportes de la ENSU, especificamente en el empleado en el 4to trimestre del 2024, páginas 6 a 8). Los datos de la latitud y longitud son aproximados y no representan la realidad, se agregaron para proyectos futuros en la creación de mapas y no tienen nada que ver con lo presentado por el INEGI. Finalmente, se agregaron las columnas CVE_ENT y NOM_ENT, que buscan asignar el Estado a la ciudad de interés.
 - Para una mejor replicabilidad y reproducibilidad se deben de descargar los archivos tal y como están especificados en la ruta `./INEGI/datos/2019-2025/.`
 - La estructura de las carpetas y el proyecto en R, debe de ser la siguiente:
 ```
@@ -45,9 +45,16 @@ Carpeta del proyecto en R
  ┃ ┃ ┣ 📄ENSU_CB_1224.csv
  ┃ ┃ ┣ 📄ENSU_CS_0319.csv
  ┃ ┃ ┣ 📄ENSU_CS_0320.csv
+ ┃ ┃ ┣ 📄ENSU_CS_0321.csv
+ ┃ ┃ ┣ 📄ENSU_CS_0322.csv
  ┃ ┃ ┣ 📄ENSU_CS_0619.csv
+ ┃ ┃ ┣ 📄ENSU_CS_0621.csv
  ┃ ┃ ┣ 📄ENSU_CS_0919.csv
+ ┃ ┃ ┣ 📄ENSU_CS_0920.csv
+ ┃ ┃ ┣ 📄ENSU_CS_0921.csv
  ┃ ┃ ┣ 📄ENSU_CS_1219.csv
+ ┃ ┃ ┣ 📄ENSU_CS_1220.csv
+ ┃ ┃ ┣ 📄ENSU_CS_1221.csv
  ┃ ┃ ┗ 📄nm_cd.csv
  ┣ 📄ENSU.Rproj
  ┣ 📄carga_datos.Rmd
@@ -77,13 +84,9 @@ tzcode source: internal
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
-other attached packages:
-[1] usethis_3.2.0
-
 loaded via a namespace (and not attached):
- [1] digest_0.6.37     fastmap_1.2.0     xfun_0.52         magrittr_2.0.3   
- [5] glue_1.8.0        knitr_1.50        htmltools_0.5.8.1 rmarkdown_2.29   
- [9] lifecycle_1.0.4   cli_3.6.5         vctrs_0.6.5       compiler_4.5.1   
-[13] purrr_1.1.0       rstudioapi_0.17.1 tools_4.5.1       evaluate_1.0.4   
-[17] yaml_2.3.10       rlang_1.1.6       fs_1.6.6 
+ [1] compiler_4.5.1    fastmap_1.2.0     cli_3.6.5         htmltools_0.5.8.1
+ [5] tools_4.5.1       rstudioapi_0.17.1 yaml_2.3.10       rmarkdown_2.29   
+ [9] knitr_1.50        xfun_0.52         digest_0.6.37     rlang_1.1.6      
+[13] evaluate_1.0.4   
 ```
