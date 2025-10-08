@@ -1,5 +1,35 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Análisis de la Encuesta Nacional de Seguridad Pública Urbana (ENSU) del INEGI (2019-2T2025)",
+    "section": "",
+    "text": "Introducción\nLa Encuesta Nacional de Seguridad Pública Urbana (ENSU) del Instituto Nacional de Estadística, Geografía e Informática (INEGI 2025), tiene como objetivo principal realizar estimaciones de la percepción de la población sobre la seguridad pública en ciudades de interés Nacional, los datos se publican trimestralmente y comenzó a realizarse a partir del tercer trimestre del 2013, y a lo largo del tiempo, se han tenido entre 70 (primer trimtres de 2019) a 91 ciudades de interés (segundo trimestre del 2025).\nA continuación, se muestra una tabla con cada una de las ciudades de cada ENSU que se analizaron para la creación de este documento:",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
+    "objectID": "index.html#metodología",
+    "href": "index.html#metodología",
+    "title": "Análisis de la Encuesta Nacional de Seguridad Pública Urbana (ENSU) del INEGI (2019-2T2025)",
+    "section": "Metodología",
+    "text": "Metodología\nSe descargaron las bases de datos, del 2019 al 2025 por trimestre, de la Encuesta Nacional de Seguridad Pública Urbana (ENSU) del Instituto Nacional de Estadística, Geografía e Informática (INEGI), trabajando especialmente con los conjutos de datos del cuestionario principal de la ENSU (terminación CB), que son las preguntas enfocadas a obtener información sobre la percepción de la población de 18 años y más, acerca de la situación de seguridad pública en el ámbito urbano.\nSe descargaron las bases de datos del cuestionario sociodemográfico para el 2019 y el primer trimestre del 2020, ya que dichos periodos, esos cuestionarios contienen los valores de sexo y edad.\nTambién, se descargó el catálogo de las Claves Geoestadísticas (CVEGEO) de todos los municipios del país y el Catálogo de Ciudades (estandarizado con lo reportado en el segundo trimestre del 2025), con el fin de homogenizar los nombres de las ENTIDADES, MUNICIPIOS y CIUDADES de las bases de datos, ya que no es lo mismo “Cuajimalpa” que “Cuajimalpa de Morelos”, o bien, “México” que “Estado de México”, y si vamos a comparar diversos años, lo importante es estandarizar esos datos. Además, se agregaron siglas de cada ciudad que usa el INEGI para su representación en algunos documentos como los resultados de la ENSU del cuarto trimestre del 2024.\nDespués al catálogo de ciudades del segundo trimestre del 2025, se agregaron todas las ciudades que han sido evaluadas desde el 2019, que por diferentes motivos como la regionalización de la CDMX o el trabajo por Convenios entre el INEGI con otros municipios, el catálogo ha ido creciendo con el tiempo.\nSe crearon diversas funciones para:\n\nAutomatización de carga de datos (31 archivos en total, siendo 26 de los cuestionarios tipo CB y 5 para los tipo CS).\nCreación de tablas resumen para la recreación de las gráficas de la ENSU.\n\nAdemás, en diversas secciones del presente reporte, se hace mención que los resultados pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 1.Com_percepcion_MES_ANIO_est. No obstante, estos tabulados solo abarcan de 2024 a 2025 y algunos pueden encontrarse en los tabulados básicos de años anteriores, por lo que para obtener y replicar los resultados del presente hacia el pasado, se elaboraron diversas funciones dentro de las cuales se pudieron obtener los datos esperados para los tabulados complementarios de los años faltantes.\nTodos los documentos empleados pueden consultarse en el repositorio.\nTambién, se hicieron correcciones breves (sin alterar los documentos originales), a los archivos CS y CB del INEGI, en el sentido de que algunos presentaban inconsistencias como:\n\nRetorno de carro (’).\nUso de valores literalmente escritos como NA en columnas de tipo integer.\nSeparación de variables BP1_6_X para los trimestres impares y pares.\nFalta de homogenización de los nombres de las ciudades evaluadas.\n\nAsí mismo, se realizaron actividades como: - Renombre de variables BP2_4_X para que todos los df sean iguales. - Unión de columnas de SEXO y EDAD entre los data frames CS y CB, desde el año 2020 hacia el pasado. - Unión de columnas FAC_VIV entre los data frames CS y CB, desde el tercer trimestre del 2022 hacia el pasado. - Se agregaron columnas auxiliares como NOMGRAFICA (nombre de la ciudad de interés conforme al catálogo creado), NOM_ABR (nombre abreviado de la ciudad), ENT_ABR (abreviatura de la entidad federativa de la ciudad). - Se agregaron las columnas del año, periodo y nombre del df.",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
+    "objectID": "index.html#secciones-contenidas-en-la-ensu",
+    "href": "index.html#secciones-contenidas-en-la-ensu",
+    "title": "Análisis de la Encuesta Nacional de Seguridad Pública Urbana (ENSU) del INEGI (2019-2T2025)",
+    "section": "Secciones contenidas en la ENSU",
+    "text": "Secciones contenidas en la ENSU\nFinalmente, tras una revisión exhaustiva de todas las Secciones evaluadas en cada Encuesta Nacional, se creó un organigrama respecto a la aparición de cada sección, este mismo orden será el que se presentará en cada capítulo del presente reporte, además de incluir primero la forma en la que se realizó el diseño muestral para replicar los resultados del INEGI. Las secciones son:\n\n\n\n\n\n\nDiseño muestral, ubicado en:\n\n1  Diseño muestral\n\nPercepción sobre seguridad pública, que abarca:\n\n2  Percepción de inseguridad en áreas urbanas de interés 3  Percepción de inseguridad por espacio físico específico 4  Expectativa social sobre seguridad pública 5  Atestiguación de tipos de conductas delictivas o antisociales 6  Cambio de hábitos por temor al delito\n\nFormas de enterarse sobre la situación de seguridad pública, ubicado en:\n\n7  Formas de enterarse sobre la situación de seguridad pública\n\nVictimización en el hogar, ubicado en:\n\n8  Victimización en el hogar\n\nPercepción sobre el desempeño de autoridades, ubicado en:\n\n9  Percepción sobre el desempeño de autoridades (identificación y desempeño) ?sec-desempenio2\n\nConflictos y conductas antisociales, que abarca:\n\n10  Conflictos o enfrentamientos 11  Conflictos directos (personas con quienes se tuvieron los conflictos) 12  Consecuencias de los conflictos\n\nDesempeño gubernamental, que abarca:\n\n13  Problemáticas urbanas 14  Efectividad del Gobierno para atender las problemáticas 15  Actividades o programas para prevenir la violencia y/o la delincuencia\n\nCorrupción en servidores públicos y autoridades de seguridad pública, ubicado en:\n\n16  Corrupción en servidores públicos y autoridades de seguridad pública\n\nConfianza en los niveles de gobierno, ubicado en:\n\n17  Confianza en los niveles de Gobierno\n\nAcoso y violencia sexual, ubicado en:\n\n18  Acoso y violencia sexual\n\n\n\n\nINEGI. 2025. «Encuesta Nacional de Seguridad Pública Urbana (ENSU), primer trimestre de 2019 a segundo trimestre de 2025». ENSU. https://www.inegi.org.mx/programas/ensu/.",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
     "objectID": "libro/intro.html",
     "href": "libro/intro.html",
     "title": "1  Diseño muestral",
@@ -52,6 +82,28 @@
     "crumbs": [
       "Diseño muestral",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño muestral</span>"
+    ]
+  },
+  {
+    "objectID": "libro/desempenio.html",
+    "href": "libro/desempenio.html",
+    "title": "9  Percepción sobre el desempeño de autoridades (identificación y desempeño)",
+    "section": "",
+    "text": "9.1 Identificación y desempeño de las autoridades\nLa séptima pregunta de la ENSU, consiste en:\n“¿Usted identifica a la (al)…?\nPermitiendo las respuestas: sí (1), no (2), no aplica (3) y No sabe / no responde (4).\nAdemás, solo si el encuestado indicó que sí identificaba a la autoridad, puede pasar a las preguntas ocho y nueve.\nEste apartado será sobre la octava pregunta, la cual es:\nDe manera general, desde 2019, las instancias evaluadas han ido cambiando ligeramente, es decir, en algunos periodos en lugar de la “Guardia Nacional” se evaluaba a la “Gendarmería Nacional”, además de que no en todos los periodos se había evaluado a la “Fuerza Aérea Mexicana”, por lo que las funciones creadas para obtener los resultados del desempeño de estas autoridades, tuvieron que considerar todos estos cambios. A continuación, estos han sido los cambios de opciones de respuesta que han tenido estas preguntas:\nEsta pregunta en la base de datos, abarca las columnas BP1_7_X a BP1_8_X. Los datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 8.Com_percepcion_de_desempeno_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.\nEl presente reporte abarca la opinión del encuestado respecto a la ientificación y desempeño de las autoridades.",
+    "crumbs": [
+      "Percepción sobre el desempeño de autoridades",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades (identificación y desempeño)</span>"
+    ]
+  },
+  {
+    "objectID": "libro/desempenio.html#identificación-y-desempeño-de-las-autoridades",
+    "href": "libro/desempenio.html#identificación-y-desempeño-de-las-autoridades",
+    "title": "9  Percepción sobre el desempeño de autoridades (identificación y desempeño)",
+    "section": "",
+    "text": "9.1.1 2019 a 2025 a Nivel Nacional\n\n9.1.1.1 General\n\n\n\n\n\n\n\n\n9.1.1.2 Hombres\n\n\n\n\n\n\n\n\n9.1.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n9.1.2 2019 a 2025 por ciudades de interés y género\n\n9.1.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n9.1.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n9.1.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n9.1.3 2019 a 2025 Ciudad de México\nPara este caso, solo se dejarán los datos correspondientes al desempeño de las autoridades, ya que los datos de identificación están en las gráficas superiores de cada ciudad de interés.\n\n9.1.3.1 General\n\n\n\n\n\n\n\n\n9.1.3.2 Hombres\n\n\n\n\n\n\n\n\n9.1.3.3 Mujeres",
+    "crumbs": [
+      "Percepción sobre el desempeño de autoridades",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades (identificación y desempeño)</span>"
     ]
   },
   {
@@ -385,462 +437,443 @@
     ]
   },
   {
-    "objectID": "libro/desempenio.html",
-    "href": "libro/desempenio.html",
-    "title": "9  Percepción sobre el desempeño de autoridades",
+    "objectID": "libro/desempenio2.html",
+    "href": "libro/desempenio2.html",
+    "title": "10  Percepción sobre el desempeño de autoridades (identificación y confianza)",
     "section": "",
-    "text": "9.1 2019 a 2025 a Nivel Nacional",
+    "text": "10.1 2019 a 2025 a Nivel Nacional\nLa séptima pregunta de la ENSU, consiste en:\n“¿Usted identifica a la (al)…?\nPermitiendo las respuestas: sí (1), no (2), no aplica (3) y No sabe / no responde (4).\nAdemás, solo si el encuestado indicó que sí identificaba a la autoridad, puede pasar a las preguntas ocho y nueve.\nEste apartado será sobre la novena pregunta, la cual es:\n“¿Cuánta confianza le inspira la (el) (AUTORIDAD)?”, que permite las respuestas:\nDe manera general, desde 2019, las instancias evaluadas han ido cambiando ligeramente, es decir, en algunos periodos en lugar de la “Guardia Nacional” se evaluaba a la “Gendarmería Nacional”, además de que no en todos los periodos se había evaluado a la “Fuerza Aérea Mexicana”, por lo que las funciones creadas para obtener los resultados del desempeño de estas autoridades, tuvieron que considerar todos estos cambios. A continuación, estos han sido los cambios de opciones de respuesta que han tenido estas preguntas:\nEsta pregunta en la base de datos, abarca las columnas BP1_7_X y BP1_9_X. Los datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 8.Com_percepcion_de_desempeno_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.\nEl presente reporte abarca la opinión del encuestado respecto a la ientificación y confianza en las autoridades.",
     "crumbs": [
       "Percepción sobre el desempeño de autoridades",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades (identificación y confianza)</span>"
+    ]
+  },
+  {
+    "objectID": "libro/desempenio2.html#a-2025-a-nivel-nacional",
+    "href": "libro/desempenio2.html#a-2025-a-nivel-nacional",
+    "title": "10  Percepción sobre el desempeño de autoridades (identificación y confianza)",
+    "section": "",
+    "text": "10.1.1 General\n\n\n\n\n\n\n\n\n10.1.2 Hombres\n\n\n\n\n\n\n\n\n10.1.3 Mujeres",
+    "crumbs": [
+      "Percepción sobre el desempeño de autoridades",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades (identificación y confianza)</span>"
+    ]
+  },
+  {
+    "objectID": "libro/desempenio2.html#a-2025-por-ciudades-de-interés-y-género",
+    "href": "libro/desempenio2.html#a-2025-por-ciudades-de-interés-y-género",
+    "title": "10  Percepción sobre el desempeño de autoridades (identificación y confianza)",
+    "section": "10.2 2019 a 2025 por ciudades de interés y género",
+    "text": "10.2 2019 a 2025 por ciudades de interés y género\n\n10.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n10.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n10.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
+    "crumbs": [
+      "Percepción sobre el desempeño de autoridades",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades (identificación y confianza)</span>"
+    ]
+  },
+  {
+    "objectID": "libro/desempenio2.html#a-2025-ciudad-de-méxico",
+    "href": "libro/desempenio2.html#a-2025-ciudad-de-méxico",
+    "title": "10  Percepción sobre el desempeño de autoridades (identificación y confianza)",
+    "section": "10.3 2019 a 2025 Ciudad de México",
+    "text": "10.3 2019 a 2025 Ciudad de México\n\n10.3.1 General\n\n\n\n\n\n\n\n\n10.3.2 Hombres\n\n\n\n\n\n\n\n\n10.3.3 Mujeres",
+    "crumbs": [
+      "Percepción sobre el desempeño de autoridades",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades (identificación y confianza)</span>"
     ]
   },
   {
     "objectID": "libro/conflictos.html",
     "href": "libro/conflictos.html",
-    "title": "10  Conflictos o enfrentamientos",
+    "title": "11  Conflictos o enfrentamientos",
     "section": "",
-    "text": "10.1 Porcentaje de la población que tuvo al menos un conflicto o enfrentamiento en su vida cotidiana\nEn la Sección II de la ENSU, llamada “Conflictos y conductas antisociales” la primer pregunta, consiste en:\n“¿Usted ha tenido, de manera directa, alguno de los siguientes conflictos o enfrentamientos con familiares, vecinos(as), compañeros(as) de trabajo o escuela, establecimientos comerciales o autoridades de gobierno por situaciones que considera lo afecten o molesten?”\nPermitiendo las respuestas: sí, no y No sabe / no responde.\nEn caso de responder con “No” o “No sabe / no responde”, se termina la entrevista para la Sección II y da pie a la Sección III. En caso de responder con “Sí”, continúa la entrevista en la pregunta 2, que es:\n“En los últimos tres meses, ¿usted ha tenido, de manera directa, conflictos o enfrentamientos con familiares, vecinos(as), compañeros(as) de trabajo o escuela, establecimientos comerciales o autoridades de gobierno por…”\nPermitiendo las respuestas:\nPermitiendo las respuestas: sí (1) y no (0). La pregunta 1 abarca la columnas BP2_1 y la pregunta 2 usa las columnas BP2_2_X.\nDe manera general, en los reportes de la ENSU al iniciar la Sección II, siempre se indica el porcentaje de la población que tuvo al menos un conflicto o enfrentamiento en su vida cotidiana durante el trimestre evaluado. Si bien, calcular el porcentaje de dicha población podría ser a partir de la pregunta BP2_1, el INEGI la calcula respecto a las preguntas BP2_1 y BP2_2_X con las siguientes condiciones:\nLos resultados de este apartado se enfocarán en la respuesta “sí” de las preguntas 1 y 2. Los datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 5.Com_conflictos_o_enfrentamientos_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.\nEl presente reporte está dividido en dos partes, abarcando de manera general si se tuvo al menos un conflicto y después por tipo de conflicto.",
+    "text": "11.1 Porcentaje de la población que tuvo al menos un conflicto o enfrentamiento en su vida cotidiana\nEn la Sección II de la ENSU, llamada “Conflictos y conductas antisociales” la primer pregunta, consiste en:\n“¿Usted ha tenido, de manera directa, alguno de los siguientes conflictos o enfrentamientos con familiares, vecinos(as), compañeros(as) de trabajo o escuela, establecimientos comerciales o autoridades de gobierno por situaciones que considera lo afecten o molesten?”\nPermitiendo las respuestas: sí, no y No sabe / no responde.\nEn caso de responder con “No” o “No sabe / no responde”, se termina la entrevista para la Sección II y da pie a la Sección III. En caso de responder con “Sí”, continúa la entrevista en la pregunta 2, que es:\n“En los últimos tres meses, ¿usted ha tenido, de manera directa, conflictos o enfrentamientos con familiares, vecinos(as), compañeros(as) de trabajo o escuela, establecimientos comerciales o autoridades de gobierno por…”\nPermitiendo las respuestas:\nPermitiendo las respuestas: sí (1) y no (0). La pregunta 1 abarca la columnas BP2_1 y la pregunta 2 usa las columnas BP2_2_X.\nDe manera general, en los reportes de la ENSU al iniciar la Sección II, siempre se indica el porcentaje de la población que tuvo al menos un conflicto o enfrentamiento en su vida cotidiana durante el trimestre evaluado. Si bien, calcular el porcentaje de dicha población podría ser a partir de la pregunta BP2_1, el INEGI la calcula respecto a las preguntas BP2_1 y BP2_2_X con las siguientes condiciones:\nLos resultados de este apartado se enfocarán en la respuesta “sí” de las preguntas 1 y 2. Los datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 5.Com_conflictos_o_enfrentamientos_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.\nEl presente reporte está dividido en dos partes, abarcando de manera general si se tuvo al menos un conflicto y después por tipo de conflicto.",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Conflictos o enfrentamientos</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conflictos o enfrentamientos</span>"
     ]
   },
   {
     "objectID": "libro/conflictos.html#porcentaje-de-la-población-que-tuvo-al-menos-un-conflicto-o-enfrentamiento-en-su-vida-cotidiana",
     "href": "libro/conflictos.html#porcentaje-de-la-población-que-tuvo-al-menos-un-conflicto-o-enfrentamiento-en-su-vida-cotidiana",
-    "title": "10  Conflictos o enfrentamientos",
+    "title": "11  Conflictos o enfrentamientos",
     "section": "",
-    "text": "10.1.1 A Nivel Nacional y género\n\n\n\n\n\n\n\n\n10.1.2 Por Ciudades de Interés y género\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n10.1.3 Ciudad de México\n\n10.1.3.1 General\n\n\n\n\n\n\n\n\n10.1.3.2 Hombres\n\n\n\n\n\n\n\n\n10.1.3.3 Mujeres",
+    "text": "11.1.1 A Nivel Nacional y género\n\n\n\n\n\n\n\n\n11.1.2 Por Ciudades de Interés y género\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n11.1.3 Ciudad de México\n\n11.1.3.1 General\n\n\n\n\n\n\n\n\n11.1.3.2 Hombres\n\n\n\n\n\n\n\n\n11.1.3.3 Mujeres",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Conflictos o enfrentamientos</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conflictos o enfrentamientos</span>"
     ]
   },
   {
     "objectID": "libro/conflictos.html#tipos-de-conflictos-o-enfrentamientos-que-tuvo-la-población-en-su-vida-cotidiana",
     "href": "libro/conflictos.html#tipos-de-conflictos-o-enfrentamientos-que-tuvo-la-población-en-su-vida-cotidiana",
-    "title": "10  Conflictos o enfrentamientos",
-    "section": "10.2 Tipos de conflictos o enfrentamientos que tuvo la población en su vida cotidiana",
-    "text": "10.2 Tipos de conflictos o enfrentamientos que tuvo la población en su vida cotidiana\n\n10.2.1 A Nivel Nacional y género\nPosterior a los gráficos generales, el INEGI indica los tipos de conflictos que tuvo la población conforme a las 17 opciones (de 18) disponibles. Los tres conflictos o enfrentamientos con mayor frecuencia a nivel Nacional son ruido, basura tirada o quemada por vecinos(as) y problemas de estacionamiento.\n\n\n\n\n\n\n\n10.2.1.1 Hombres\n\n\n\n\n\n\n\n\n10.2.1.2 Mujeres\n\n\n\n\n\n\n\n\n\n10.2.2 Por Ciudades de Interés y género\n\n10.2.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n10.2.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n10.2.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n10.2.3 Ciudad de México\n\n10.2.3.1 General\n\n\n\n\n\n\n\n\n10.2.3.2 Hombres\n\n\n\n\n\n\n\n\n10.2.3.3 Mujeres",
+    "title": "11  Conflictos o enfrentamientos",
+    "section": "11.2 Tipos de conflictos o enfrentamientos que tuvo la población en su vida cotidiana",
+    "text": "11.2 Tipos de conflictos o enfrentamientos que tuvo la población en su vida cotidiana\n\n11.2.1 A Nivel Nacional y género\nPosterior a los gráficos generales, el INEGI indica los tipos de conflictos que tuvo la población conforme a las 17 opciones (de 18) disponibles. Los tres conflictos o enfrentamientos con mayor frecuencia a nivel Nacional son ruido, basura tirada o quemada por vecinos(as) y problemas de estacionamiento.\n\n\n\n\n\n\n\n11.2.1.1 Hombres\n\n\n\n\n\n\n\n\n11.2.1.2 Mujeres\n\n\n\n\n\n\n\n\n\n11.2.2 Por Ciudades de Interés y género\n\n11.2.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n11.2.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n11.2.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n11.2.3 Ciudad de México\n\n11.2.3.1 General\n\n\n\n\n\n\n\n\n11.2.3.2 Hombres\n\n\n\n\n\n\n\n\n11.2.3.3 Mujeres",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Conflictos o enfrentamientos</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conflictos o enfrentamientos</span>"
     ]
   },
   {
     "objectID": "libro/conflictos_directos.html",
     "href": "libro/conflictos_directos.html",
-    "title": "11  Conflictos directos (personas con quienes se tuvieron los conflictos)",
+    "title": "12  Conflictos directos (personas con quienes se tuvieron los conflictos)",
     "section": "",
-    "text": "11.1 2019 a 2025 a Nivel Nacional\nLa tercera pregunta de Sección II de la ENSU, consiste en:\n“Derivado del (los) incidente(s) o problema(s) anterior(es), ¿con quién ha tenido conflictos directos?”\nPor conflictos directos, se refiere a las 18 categorías de la pregunta 2. La pregunta 3 permite las opciones:\nPermitiendo las respuestas: sí (1) y no (0). El cálculo de los porcentajes para esta pregunta depende de las siguientes condiciones:\nLos datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 5.Com_conflictos_o_enfrentamientos_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.\nA continuación se muestran los gráficos de la tercer pregunta, desde 2019 a nivel Nacional. De manera general, los “Vecinos(as)” han sido el principal actor de conflicto a lo largo del tiempo, donde al menos de 6 a 8 conflictos de 10 han sido entre vecinos. Seguido de desconocidos en la calle, donde de 3 a 4 han sido con desconocidos en la calle.",
+    "text": "12.1 2019 a 2025 a Nivel Nacional\nLa tercera pregunta de Sección II de la ENSU, consiste en:\n“Derivado del (los) incidente(s) o problema(s) anterior(es), ¿con quién ha tenido conflictos directos?”\nPor conflictos directos, se refiere a las 18 categorías de la pregunta 2. La pregunta 3 permite las opciones:\nPermitiendo las respuestas: sí (1) y no (0). El cálculo de los porcentajes para esta pregunta depende de las siguientes condiciones:\nLos datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 5.Com_conflictos_o_enfrentamientos_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.\nA continuación se muestran los gráficos de la tercer pregunta, desde 2019 a nivel Nacional. De manera general, los “Vecinos(as)” han sido el principal actor de conflicto a lo largo del tiempo, donde al menos de 6 a 8 conflictos de 10 han sido entre vecinos. Seguido de desconocidos en la calle, donde de 3 a 4 han sido con desconocidos en la calle.",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conflictos directos (personas con quienes se tuvieron los conflictos)</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Conflictos directos (personas con quienes se tuvieron los conflictos)</span>"
     ]
   },
   {
     "objectID": "libro/conflictos_directos.html#a-2025-a-nivel-nacional",
     "href": "libro/conflictos_directos.html#a-2025-a-nivel-nacional",
-    "title": "11  Conflictos directos (personas con quienes se tuvieron los conflictos)",
+    "title": "12  Conflictos directos (personas con quienes se tuvieron los conflictos)",
     "section": "",
-    "text": "11.1.0.1 Hombres\n\n\n\n\n\n\n\n\n11.1.0.2 Mujeres",
+    "text": "12.1.0.1 Hombres\n\n\n\n\n\n\n\n\n12.1.0.2 Mujeres",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conflictos directos (personas con quienes se tuvieron los conflictos)</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Conflictos directos (personas con quienes se tuvieron los conflictos)</span>"
     ]
   },
   {
     "objectID": "libro/conflictos_directos.html#por-ciudades-de-interés-y-género",
     "href": "libro/conflictos_directos.html#por-ciudades-de-interés-y-género",
-    "title": "11  Conflictos directos (personas con quienes se tuvieron los conflictos)",
-    "section": "11.2 Por Ciudades de Interés y género",
-    "text": "11.2 Por Ciudades de Interés y género\nA nivel ciudad, en todas el patrón ha sido el mismo, donde la categoría “Vecinos(as)” son con quienes se han tenido problemas de convivencia.\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n11.2.0.1 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n11.2.0.2 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
+    "title": "12  Conflictos directos (personas con quienes se tuvieron los conflictos)",
+    "section": "12.2 Por Ciudades de Interés y género",
+    "text": "12.2 Por Ciudades de Interés y género\nA nivel ciudad, en todas el patrón ha sido el mismo, donde la categoría “Vecinos(as)” son con quienes se han tenido problemas de convivencia.\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n12.2.0.1 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n12.2.0.2 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conflictos directos (personas con quienes se tuvieron los conflictos)</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Conflictos directos (personas con quienes se tuvieron los conflictos)</span>"
     ]
   },
   {
     "objectID": "libro/conflictos_directos.html#ciudad-de-méxico",
     "href": "libro/conflictos_directos.html#ciudad-de-méxico",
-    "title": "11  Conflictos directos (personas con quienes se tuvieron los conflictos)",
-    "section": "11.3 Ciudad de México",
-    "text": "11.3 Ciudad de México\n\n\n\n\n\n\n\n11.3.1 Hombres\n\n\n\n\n\n\n\n\n11.3.2 Mujeres",
+    "title": "12  Conflictos directos (personas con quienes se tuvieron los conflictos)",
+    "section": "12.3 Ciudad de México",
+    "text": "12.3 Ciudad de México\n\n\n\n\n\n\n\n12.3.1 Hombres\n\n\n\n\n\n\n\n\n12.3.2 Mujeres",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Conflictos directos (personas con quienes se tuvieron los conflictos)</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Conflictos directos (personas con quienes se tuvieron los conflictos)</span>"
     ]
   },
   {
     "objectID": "libro/consecuencias.html",
     "href": "libro/consecuencias.html",
-    "title": "12  Consecuencias de los conflictos",
+    "title": "13  Consecuencias de los conflictos",
     "section": "",
-    "text": "12.1 AVISO GENERAL\nLa cuarta pregunta de Sección II de la ENSU, consiste en:\n“Derivado de este (estos) conflicto(s), ¿qué tipo de consecuencias hubo?”\nPor conflictos, se refiere a las 18 categorías de la pregunta 2. La pregunta 4 permite las opciones:\nPermitiendo las respuestas: sí (1) y no (0). El cálculo de los porcentajes para esta pregunta depende de las siguientes condiciones:\nAdemás, se crean al menos tres categorías más, siendo estas:\nDe esta forma, primero se evalua el porcentaje de la población que presento alguna consecuencia derivado de los conflictos que tuvo. Segundo, se evalua el tipo de general de consecuencia (Física, no física, material, otra y ninguna) y por último, se define el tipo de consecuencia que tuvo el afectado, la forma de trabajo queda definida en las presentaciones del INEGI de 2024 hacia el pasado, como en la diapositiva 79 del reporte de la ENSU del 4to trimestre de 2024.\nLos datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 5.Com_conflictos_o_enfrentamientos_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.\nPor todo lo anterior, el presente reporte se divide en tres secciones:",
+    "text": "13.1 AVISO GENERAL\nLa cuarta pregunta de Sección II de la ENSU, consiste en:\n“Derivado de este (estos) conflicto(s), ¿qué tipo de consecuencias hubo?”\nPor conflictos, se refiere a las 18 categorías de la pregunta 2. La pregunta 4 permite las opciones:\nPermitiendo las respuestas: sí (1) y no (0). El cálculo de los porcentajes para esta pregunta depende de las siguientes condiciones:\nAdemás, se crean al menos tres categorías más, siendo estas:\nDe esta forma, primero se evalua el porcentaje de la población que presento alguna consecuencia derivado de los conflictos que tuvo. Segundo, se evalua el tipo de general de consecuencia (Física, no física, material, otra y ninguna) y por último, se define el tipo de consecuencia que tuvo el afectado, la forma de trabajo queda definida en las presentaciones del INEGI de 2024 hacia el pasado, como en la diapositiva 79 del reporte de la ENSU del 4to trimestre de 2024.\nLos datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 5.Com_conflictos_o_enfrentamientos_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.\nPor todo lo anterior, el presente reporte se divide en tres secciones:",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
     ]
   },
   {
     "objectID": "libro/consecuencias.html#aviso-general",
     "href": "libro/consecuencias.html#aviso-general",
-    "title": "12  Consecuencias de los conflictos",
+    "title": "13  Consecuencias de los conflictos",
     "section": "",
     "text": "Gritos\nInsultos o groserías\nEmpujones o pellizcos\nGolpes (puñetazos, patadas)\nGolpes con objetos contundentes (palos, varillas, tubos, etcétera)\nHerida con arma blanca (punzocortante)\nHerida con arma de fuego (pistola u otra)\nDaños materiales (casa, automóvil)\nDiálogo / plática\nNinguno\nOtro\n\n\n\nQue en la pregunta 1 la respuesta sea que “Sí” experimentó conflictos.\nQue en la pregunta 2 no debió de haber respondido “Ninguno”\n\n\n\nAlguna: que aplica a todas las consecuencias excepto “Ninguno” (10)\nFísicas: que abarca las variables 03 a 07\nNo físicas: que aplica a las variables 01, 02, 09.\n\n\n\n\n\n\n\n\n\n\nExistencia o no de consecuencia ante un conflicto.\nTipo de consecuencia general ante un conflicto.\nTipos de consecuencias ante un conflicto.",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
     ]
   },
   {
     "objectID": "libro/consecuencias.html#existencia-o-no-de-consecuencia-ante-un-conflicto.",
     "href": "libro/consecuencias.html#existencia-o-no-de-consecuencia-ante-un-conflicto.",
-    "title": "12  Consecuencias de los conflictos",
-    "section": "12.2 Existencia o no de consecuencia ante un conflicto.",
-    "text": "12.2 Existencia o no de consecuencia ante un conflicto.\n\n12.2.1 2019 a 2025 a Nivel Nacional\nSe recuerda que esta pregunta deriva de que el usuario en la primer pregunta haya contestado “Sí”, que en la segunda pregunta hubiera contestado “Ninguno” y que en la cuarta pregunta hubiese contestado “Ninguno” u alguna otra de las respuestas (para un caso afirmativo de una consecuencia ante un conflicto), por lo que a lo largo del tiempo entre 8 a 9 personas de cada 10 sí tuvieron alguna consecuencia derivado de un conflicto.\n\n12.2.1.1 General\n\n\n\n\n\n\n\n\n12.2.1.2 Hombres\n\n\n\n\n\n\n\n\n12.2.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n12.2.2 2019 a 2025 por ciudades de interés y género\nLos resultados de este apartado se enfocarán en la respuesta “sí”, por lo que, a continuación se muestran los resultados por ciudades y género.\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n12.2.3 2019 a 2025 Ciudad de México\n\n12.2.3.1 General\n\n\n\n\n\n\n\n\n12.2.3.2 Hombres\n\n\n\n\n\n\n\n\n12.2.3.3 Mujeres",
+    "title": "13  Consecuencias de los conflictos",
+    "section": "13.2 Existencia o no de consecuencia ante un conflicto.",
+    "text": "13.2 Existencia o no de consecuencia ante un conflicto.\n\n13.2.1 2019 a 2025 a Nivel Nacional\nSe recuerda que esta pregunta deriva de que el usuario en la primer pregunta haya contestado “Sí”, que en la segunda pregunta hubiera contestado “Ninguno” y que en la cuarta pregunta hubiese contestado “Ninguno” u alguna otra de las respuestas (para un caso afirmativo de una consecuencia ante un conflicto), por lo que a lo largo del tiempo entre 8 a 9 personas de cada 10 sí tuvieron alguna consecuencia derivado de un conflicto.\n\n13.2.1.1 General\n\n\n\n\n\n\n\n\n13.2.1.2 Hombres\n\n\n\n\n\n\n\n\n13.2.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n13.2.2 2019 a 2025 por ciudades de interés y género\nLos resultados de este apartado se enfocarán en la respuesta “sí”, por lo que, a continuación se muestran los resultados por ciudades y género.\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n13.2.3 2019 a 2025 Ciudad de México\n\n13.2.3.1 General\n\n\n\n\n\n\n\n\n13.2.3.2 Hombres\n\n\n\n\n\n\n\n\n13.2.3.3 Mujeres",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
     ]
   },
   {
     "objectID": "libro/consecuencias.html#tipo-de-consecuencia-general-ante-un-conflicto.",
     "href": "libro/consecuencias.html#tipo-de-consecuencia-general-ante-un-conflicto.",
-    "title": "12  Consecuencias de los conflictos",
-    "section": "12.3 Tipo de consecuencia general ante un conflicto.",
-    "text": "12.3 Tipo de consecuencia general ante un conflicto.\n\n12.3.1 2019 a 2025 a Nivel Nacional\nSe recuerda que esta pregunta deriva de que el usuario en la primer pregunta haya contestado “Sí”, que en la segunda pregunta hubiera contestado “Ninguno” y que en la cuarta pregunta hubiese contestado “Ninguno” u alguna otra de las respuestas (para un caso afirmativo de una consecuencia ante un conflicto), por lo que a lo largo del tiempo entre 8 a 9 personas de cada 10 sí tuvieron alguna consecuencia NO física derivado de un conflicto y aproximadamente 1 persona de cada 10 tuvó una consecuencia física.\n\n12.3.1.1 General\n\n\n\n\n\n\n\n\n12.3.1.2 Hombres\n\n\n\n\n\n\n\n\n12.3.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n12.3.2 2019 a 2025 por ciudades de interés y género\n\n12.3.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n12.3.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n12.3.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 -Mujeres\n\n\n\n\n\n\n\n\n12.3.3 2019 a 2025 Ciudad de México\n\n12.3.3.1 General\n\n\n\n\n\n\n\n\n12.3.3.2 Hombres\n\n\n\n\n\n\n\n\n12.3.3.3 Mujeres",
+    "title": "13  Consecuencias de los conflictos",
+    "section": "13.3 Tipo de consecuencia general ante un conflicto.",
+    "text": "13.3 Tipo de consecuencia general ante un conflicto.\n\n13.3.1 2019 a 2025 a Nivel Nacional\nSe recuerda que esta pregunta deriva de que el usuario en la primer pregunta haya contestado “Sí”, que en la segunda pregunta hubiera contestado “Ninguno” y que en la cuarta pregunta hubiese contestado “Ninguno” u alguna otra de las respuestas (para un caso afirmativo de una consecuencia ante un conflicto), por lo que a lo largo del tiempo entre 8 a 9 personas de cada 10 sí tuvieron alguna consecuencia NO física derivado de un conflicto y aproximadamente 1 persona de cada 10 tuvó una consecuencia física.\n\n13.3.1.1 General\n\n\n\n\n\n\n\n\n13.3.1.2 Hombres\n\n\n\n\n\n\n\n\n13.3.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n13.3.2 2019 a 2025 por ciudades de interés y género\n\n13.3.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n13.3.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n13.3.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 -Mujeres\n\n\n\n\n\n\n\n\n13.3.3 2019 a 2025 Ciudad de México\n\n13.3.3.1 General\n\n\n\n\n\n\n\n\n13.3.3.2 Hombres\n\n\n\n\n\n\n\n\n13.3.3.3 Mujeres",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
     ]
   },
   {
     "objectID": "libro/consecuencias.html#tipos-de-consecuencias-ante-un-conflicto.",
     "href": "libro/consecuencias.html#tipos-de-consecuencias-ante-un-conflicto.",
-    "title": "12  Consecuencias de los conflictos",
-    "section": "12.4 Tipos de consecuencias ante un conflicto.",
-    "text": "12.4 Tipos de consecuencias ante un conflicto.\nSe recuerda que esta pregunta deriva de que el usuario en la primer pregunta haya contestado “Sí”, que en la segunda pregunta hubiera contestado “Ninguno” y que en la cuarta pregunta hubiese contestado “Ninguno” u alguna otra de las respuestas, por lo que a lo largo del tiempo la principal consecuencia derivada de un conflicto han sido “Diálogo o plática”, seguido de “Gritos” e “Insultos o groserías” como los tres tipos de consecuencias principales.\n\n12.4.1 2019 a 2025 a Nivel Nacional\n\n12.4.1.1 General\n\n\n\n\n\n\n\n\n12.4.1.2 Hombres\n\n\n\n\n\n\n\n\n12.4.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n12.4.2 2019 a 2025 por ciudades de interés y género\n\n12.4.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n12.4.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n12.4.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n12.4.3 2019 a 2025 Ciudad de México\n\n12.4.3.1 General\n\n\n\n\n\n\n\n\n12.4.3.2 Hombres\n\n\n\n\n\n\n\n\n12.4.3.3 Mujeres",
+    "title": "13  Consecuencias de los conflictos",
+    "section": "13.4 Tipos de consecuencias ante un conflicto.",
+    "text": "13.4 Tipos de consecuencias ante un conflicto.\nSe recuerda que esta pregunta deriva de que el usuario en la primer pregunta haya contestado “Sí”, que en la segunda pregunta hubiera contestado “Ninguno” y que en la cuarta pregunta hubiese contestado “Ninguno” u alguna otra de las respuestas, por lo que a lo largo del tiempo la principal consecuencia derivada de un conflicto han sido “Diálogo o plática”, seguido de “Gritos” e “Insultos o groserías” como los tres tipos de consecuencias principales.\n\n13.4.1 2019 a 2025 a Nivel Nacional\n\n13.4.1.1 General\n\n\n\n\n\n\n\n\n13.4.1.2 Hombres\n\n\n\n\n\n\n\n\n13.4.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n13.4.2 2019 a 2025 por ciudades de interés y género\n\n13.4.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n13.4.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n13.4.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n13.4.3 2019 a 2025 Ciudad de México\n\n13.4.3.1 General\n\n\n\n\n\n\n\n\n13.4.3.2 Hombres\n\n\n\n\n\n\n\n\n13.4.3.3 Mujeres",
     "crumbs": [
       "Conflictos y conductas antisociales",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Consecuencias de los conflictos</span>"
     ]
   },
   {
     "objectID": "libro/problemas_t.html",
     "href": "libro/problemas_t.html",
-    "title": "13  Problemáticas urbanas",
+    "title": "14  Problemáticas urbanas",
     "section": "",
-    "text": "13.1 Porcentaje de la población que tuvo al menos un tipo de problema urbano.\nEn la Sección III de la ENSU, llamada “Desempeño gubernamental” la primer pregunta, consiste en:\n“En su opinión, ¿cuáles son los problemas más importantes que en (CIUDAD) se enfrentan hoy en día?”\nLas opciones son:\nPermitiendo las respuestas: sí (1) y no (0). A partir de 2021 se anexo la opción “Hospitales saturados o con servicio deficiente”.\nEn los reportes del INEGI para la sección “Problemáticas en la ciudad”, esta siempre comienza indicando el porcentaje de la población que identificó algun tipo de problema, es decir, todavía no separa por tipo de problemática, posteriormente evalua por tipo de problema de manera general (a nivel nacional), por lo que, de la misma manera, el presente reporte está dividido en dos partes.\nLos resultados de este apartado se enfocarán en la respuesta “sí”. Los datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 9.Com_problematicas_percepcion_desempeno_gob_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.",
+    "text": "14.1 Porcentaje de la población que tuvo al menos un tipo de problema urbano.\nEn la Sección III de la ENSU, llamada “Desempeño gubernamental” la primer pregunta, consiste en:\n“En su opinión, ¿cuáles son los problemas más importantes que en (CIUDAD) se enfrentan hoy en día?”\nLas opciones son:\nPermitiendo las respuestas: sí (1) y no (0). A partir de 2021 se anexo la opción “Hospitales saturados o con servicio deficiente”.\nEn los reportes del INEGI para la sección “Problemáticas en la ciudad”, esta siempre comienza indicando el porcentaje de la población que identificó algun tipo de problema, es decir, todavía no separa por tipo de problemática, posteriormente evalua por tipo de problema de manera general (a nivel nacional), por lo que, de la misma manera, el presente reporte está dividido en dos partes.\nLos resultados de este apartado se enfocarán en la respuesta “sí”. Los datos pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 9.Com_problematicas_percepcion_desempeno_gob_MES_ANIO_est, en los tabulados básicos de años anteriores al 2024 también se pueden encontrar los resultados, aunque no tan desglosados.",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Problemáticas urbanas</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Problemáticas urbanas</span>"
     ]
   },
   {
     "objectID": "libro/problemas_t.html#porcentaje-de-la-población-que-tuvo-al-menos-un-tipo-de-problema-urbano.",
     "href": "libro/problemas_t.html#porcentaje-de-la-población-que-tuvo-al-menos-un-tipo-de-problema-urbano.",
-    "title": "13  Problemáticas urbanas",
+    "title": "14  Problemáticas urbanas",
     "section": "",
-    "text": "13.1.1 A Nivel Nacional y género\n\n\n\n\n\n\n\n\n13.1.2 Por Ciudades de Interés y género\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n13.1.3 Ciudad de México\n\n13.1.3.1 General\n\n\n\n\n\n\n\n\n13.1.3.2 Hombres\n\n\n\n\n\n\n\n\n13.1.3.3 Mujeres",
+    "text": "14.1.1 A Nivel Nacional y género\n\n\n\n\n\n\n\n\n14.1.2 Por Ciudades de Interés y género\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n14.1.3 Ciudad de México\n\n14.1.3.1 General\n\n\n\n\n\n\n\n\n14.1.3.2 Hombres\n\n\n\n\n\n\n\n\n14.1.3.3 Mujeres",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Problemáticas urbanas</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Problemáticas urbanas</span>"
     ]
   },
   {
     "objectID": "libro/problemas_t.html#tipos-de-problemas-urbanos-que-tuvo-la-población",
     "href": "libro/problemas_t.html#tipos-de-problemas-urbanos-que-tuvo-la-población",
-    "title": "13  Problemáticas urbanas",
-    "section": "13.2 Tipos de problemas urbanos que tuvo la población",
-    "text": "13.2 Tipos de problemas urbanos que tuvo la población\nPosterior a los gráficos generales, el INEGI indica los tipos de problemas urbanos que tuvo la población conforme a las 17 opciones disponibles. Las tres problemáticas urbanas registradas con mayor frecuencia a nivel Nacional son “Baches en calles y avenidas”, “Fallas y fugas en el suministro de agua potable” y “Alumbrado público insuficiente”.\n\n13.2.1 A Nivel Nacional y género\n\n\n\n\n\n\n\n13.2.1.1 Hombres\n\n\n\n\n\n\n\n\n13.2.1.2 Mujeres\n\n\n\n\n\n\n\n\n\n13.2.2 Por Ciudades de Interés y género\n\n13.2.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n13.2.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n13.2.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n13.2.3 Ciudad de México\n\n13.2.3.1 General\n\n\n\n\n\n\n\n\n13.2.3.2 Hombres\n\n\n\n\n\n\n\n\n13.2.3.3 Mujeres",
+    "title": "14  Problemáticas urbanas",
+    "section": "14.2 Tipos de problemas urbanos que tuvo la población",
+    "text": "14.2 Tipos de problemas urbanos que tuvo la población\nPosterior a los gráficos generales, el INEGI indica los tipos de problemas urbanos que tuvo la población conforme a las 17 opciones disponibles. Las tres problemáticas urbanas registradas con mayor frecuencia a nivel Nacional son “Baches en calles y avenidas”, “Fallas y fugas en el suministro de agua potable” y “Alumbrado público insuficiente”.\n\n14.2.1 A Nivel Nacional y género\n\n\n\n\n\n\n\n14.2.1.1 Hombres\n\n\n\n\n\n\n\n\n14.2.1.2 Mujeres\n\n\n\n\n\n\n\n\n\n14.2.2 Por Ciudades de Interés y género\n\n14.2.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n14.2.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n14.2.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n14.2.3 Ciudad de México\n\n14.2.3.1 General\n\n\n\n\n\n\n\n\n14.2.3.2 Hombres\n\n\n\n\n\n\n\n\n14.2.3.3 Mujeres",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Problemáticas urbanas</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Problemáticas urbanas</span>"
     ]
   },
   {
     "objectID": "libro/efectividad_t.html",
     "href": "libro/efectividad_t.html",
-    "title": "14  Efectividad del Gobierno para atender las problemáticas",
+    "title": "15  Efectividad del Gobierno para atender las problemáticas",
     "section": "",
-    "text": "14.1 2019 a 2025 a Nivel Nacional\nLa segunda pregunta de la Sección III de la ENSU, consiste en:\n“¿Qué tan efectivo ha sido el gobierno de (CIUDAD) para resolver estos problemas?”\nPermitiendo las respuestas:\nNo obstante, en los resultados del INEGI, se emplean las categorías “Muy o algo efectivo” y “Poco o nada efectivo”, por lo que se crearon también esas categorías, por lo que resultados de solo esas categorías pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 9.Com_problematicas_percepcion_desempeno_gob_MES_ANIO_est.",
+    "text": "15.1 2019 a 2025 a Nivel Nacional\nLa segunda pregunta de la Sección III de la ENSU, consiste en:\n“¿Qué tan efectivo ha sido el gobierno de (CIUDAD) para resolver estos problemas?”\nPermitiendo las respuestas:\nNo obstante, en los resultados del INEGI, se emplean las categorías “Muy o algo efectivo” y “Poco o nada efectivo”, por lo que se crearon también esas categorías, por lo que resultados de solo esas categorías pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 9.Com_problematicas_percepcion_desempeno_gob_MES_ANIO_est.",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Efectividad del Gobierno para atender las problemáticas</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Efectividad del Gobierno para atender las problemáticas</span>"
     ]
   },
   {
     "objectID": "libro/efectividad_t.html#a-2025-a-nivel-nacional",
     "href": "libro/efectividad_t.html#a-2025-a-nivel-nacional",
-    "title": "14  Efectividad del Gobierno para atender las problemáticas",
+    "title": "15  Efectividad del Gobierno para atender las problemáticas",
     "section": "",
-    "text": "14.1.1 General\n\n\n\n\n\n\n\n\n14.1.2 Hombres\n\n\n\n\n\n\n\n\n14.1.3 Mujeres",
+    "text": "15.1.1 General\n\n\n\n\n\n\n\n\n15.1.2 Hombres\n\n\n\n\n\n\n\n\n15.1.3 Mujeres",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Efectividad del Gobierno para atender las problemáticas</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Efectividad del Gobierno para atender las problemáticas</span>"
     ]
   },
   {
     "objectID": "libro/efectividad_t.html#a-2025-por-ciudades-de-interés-y-género",
     "href": "libro/efectividad_t.html#a-2025-por-ciudades-de-interés-y-género",
-    "title": "14  Efectividad del Gobierno para atender las problemáticas",
-    "section": "14.2 2019 a 2025 por ciudades de interés y género",
-    "text": "14.2 2019 a 2025 por ciudades de interés y género\n\n14.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n14.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n14.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
+    "title": "15  Efectividad del Gobierno para atender las problemáticas",
+    "section": "15.2 2019 a 2025 por ciudades de interés y género",
+    "text": "15.2 2019 a 2025 por ciudades de interés y género\n\n15.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n15.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n15.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Efectividad del Gobierno para atender las problemáticas</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Efectividad del Gobierno para atender las problemáticas</span>"
     ]
   },
   {
     "objectID": "libro/efectividad_t.html#a-2025-ciudad-de-méxico",
     "href": "libro/efectividad_t.html#a-2025-ciudad-de-méxico",
-    "title": "14  Efectividad del Gobierno para atender las problemáticas",
-    "section": "14.3 2019 a 2025 Ciudad de México",
-    "text": "14.3 2019 a 2025 Ciudad de México\n\n14.3.1 General\n\n\n\n\n\n\n\n\n14.3.2 Hombres\n\n\n\n\n\n\n\n\n14.3.3 Mujeres",
+    "title": "15  Efectividad del Gobierno para atender las problemáticas",
+    "section": "15.3 2019 a 2025 Ciudad de México",
+    "text": "15.3 2019 a 2025 Ciudad de México\n\n15.3.1 General\n\n\n\n\n\n\n\n\n15.3.2 Hombres\n\n\n\n\n\n\n\n\n15.3.3 Mujeres",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Efectividad del Gobierno para atender las problemáticas</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Efectividad del Gobierno para atender las problemáticas</span>"
     ]
   },
   {
     "objectID": "libro/programas_prev_t.html",
     "href": "libro/programas_prev_t.html",
-    "title": "15  Actividades o programas para prevenir la violencia y/o la delincuencia",
+    "title": "16  Actividades o programas para prevenir la violencia y/o la delincuencia",
     "section": "",
-    "text": "15.1 2019 a 2025 a Nivel Nacional\nLa pregunta 3a de la Sección III de la ENSU, consiste en:\n“¿Conoce o ha escuchado si el gobierno de (CIUDAD) ha implementado actividades o programas para prevenir la violencia y/o la delincuencia, tales como, policía de barrio, eventos deportivos, culturales, sociales, jornadas de reforestación, entre otros?”\nPermitiendo las respuestas:\nLos resultados de este apartado pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 10.Com_conocimiento_acciones_gob_MES_ANIO_est. No obstante, se hace mención que esta pregunta comenzó a hacerse en la ENSU a partir del 4to trimestre de 2022.",
+    "text": "16.1 2019 a 2025 a Nivel Nacional\nLa pregunta 3a de la Sección III de la ENSU, consiste en:\n“¿Conoce o ha escuchado si el gobierno de (CIUDAD) ha implementado actividades o programas para prevenir la violencia y/o la delincuencia, tales como, policía de barrio, eventos deportivos, culturales, sociales, jornadas de reforestación, entre otros?”\nPermitiendo las respuestas:\nLos resultados de este apartado pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 10.Com_conocimiento_acciones_gob_MES_ANIO_est. No obstante, se hace mención que esta pregunta comenzó a hacerse en la ENSU a partir del 4to trimestre de 2022.",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Actividades o programas para prevenir la violencia y/o la delincuencia</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Actividades o programas para prevenir la violencia y/o la delincuencia</span>"
     ]
   },
   {
     "objectID": "libro/programas_prev_t.html#a-2025-a-nivel-nacional",
     "href": "libro/programas_prev_t.html#a-2025-a-nivel-nacional",
-    "title": "15  Actividades o programas para prevenir la violencia y/o la delincuencia",
+    "title": "16  Actividades o programas para prevenir la violencia y/o la delincuencia",
     "section": "",
-    "text": "15.1.1 General\n\n\n\n\n\n\n\n\n15.1.2 Hombres\n\n\n\n\n\n\n\n\n15.1.3 Mujeres",
+    "text": "16.1.1 General\n\n\n\n\n\n\n\n\n16.1.2 Hombres\n\n\n\n\n\n\n\n\n16.1.3 Mujeres",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Actividades o programas para prevenir la violencia y/o la delincuencia</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Actividades o programas para prevenir la violencia y/o la delincuencia</span>"
     ]
   },
   {
     "objectID": "libro/programas_prev_t.html#a-2025-por-ciudades-de-interés-y-género",
     "href": "libro/programas_prev_t.html#a-2025-por-ciudades-de-interés-y-género",
-    "title": "15  Actividades o programas para prevenir la violencia y/o la delincuencia",
-    "section": "15.2 2019 a 2025 por ciudades de interés y género",
-    "text": "15.2 2019 a 2025 por ciudades de interés y género\n\n15.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n15.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n15.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
+    "title": "16  Actividades o programas para prevenir la violencia y/o la delincuencia",
+    "section": "16.2 2019 a 2025 por ciudades de interés y género",
+    "text": "16.2 2019 a 2025 por ciudades de interés y género\n\n16.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n16.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n16.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Actividades o programas para prevenir la violencia y/o la delincuencia</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Actividades o programas para prevenir la violencia y/o la delincuencia</span>"
     ]
   },
   {
     "objectID": "libro/programas_prev_t.html#a-2025-ciudad-de-méxico",
     "href": "libro/programas_prev_t.html#a-2025-ciudad-de-méxico",
-    "title": "15  Actividades o programas para prevenir la violencia y/o la delincuencia",
-    "section": "15.3 2019 a 2025 Ciudad de México",
-    "text": "15.3 2019 a 2025 Ciudad de México\n\n15.3.1 General\n\n\n\n\n\n\n\n\n15.3.2 Hombres\n\n\n\n\n\n\n\n\n15.3.3 Mujeres",
+    "title": "16  Actividades o programas para prevenir la violencia y/o la delincuencia",
+    "section": "16.3 2019 a 2025 Ciudad de México",
+    "text": "16.3 2019 a 2025 Ciudad de México\n\n16.3.1 General\n\n\n\n\n\n\n\n\n16.3.2 Hombres\n\n\n\n\n\n\n\n\n16.3.3 Mujeres",
     "crumbs": [
       "Desempeño gubernamental",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Actividades o programas para prevenir la violencia y/o la delincuencia</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Actividades o programas para prevenir la violencia y/o la delincuencia</span>"
     ]
   },
   {
     "objectID": "libro/corrupcion.html",
     "href": "libro/corrupcion.html",
-    "title": "16  Corrupción en servidores públicos y autoridades de seguridad pública",
+    "title": "17  Corrupción en servidores públicos y autoridades de seguridad pública",
     "section": "",
-    "text": "16.1 AVISO GENERAL\nEste apartado se pregunta cada semestre y se encuentra dentro de la sección 3 de la encuesta de la ENSU, se aplico con excepcion en el tercer trimestre del 2020, debido a que no se ejecutó la ENSU del segundo trimestre por la emergencia sanitaria COVID-19.\nDe manera general se busca lo siguiente:\nLo anterior conforme a las siguientes 4 preguntas (2 por cada tipo de autoridad):\n- Para Servidores públicos:\n3.3 En los últimos seis meses, ¿usted realizó de forma directa algún trámite, pago o solicitud de servicio ante un (una) servidor(a) público(a) o empleado(a) de gobierno?\n3.4 En los últimos seis meses, ¿un (una) servidor(a) público(a) o empleado(a) de gobierno le insinuó, le pidió de forma directa o generó las condiciones para que le diera dinero, un regalo o favor para agilizar, aprobar o evitar los procedimientos?\n- Para autoridades de seguridad pública:\n3.5 En los últimos seis meses, ¿usted tuvo contacto directo con policías de tránsito, municipales, estatales u otras autoridades de seguridad pública por incidentes de tránsito, infracciones, detenciones por riñas, faltas a la moral o administrativas?\n3.6 En los últimos seis meses, ¿la policía u otra autoridad de seguridad pública le insinuó, le pidió de forma directa o generó las condiciones para que le diera dinero, un regalo o favor para agilizar, aprobar, o bien, evitar infracciones o detenciones?\nLas 4 preguntas permiten las respuestas: sí (1), no (2) y no sabe / no responde (9).\nDado que las segundas preguntas de cada tipo de autoridad se responden solo si en la primer pregunta al respuesta fue afirmativa, se debe de entender que el porcentaje no representa el 100% de la muestra sino que es solo de la parte que contestó que sí tuvo contacto directo con una autoridad, por ejemplo:\n- Para el 4to trimestre del 2024 (segundo semestre de 2024), 14% de la población encuestada (1 de cada 10 personas) indicó que sí tuvo contacto con una autoridad de seguridad pública, y de ese 14% si lo llevamos al 100%, entonces 47.2% de los que contestaron que “sí” experimentaron una situación de corrupción con dicha autoridad.\nLos resultados de este apartado pueden ser corroborados en los tabulados complementarios de la ENSU de los trimestres pares, especificamente en los archivos con la siguiente nomenclatura: 11.Bas_corrupcion_servidores_autoridades_MES_ANIO_est.\nPor todo lo anterior, el presente reporte estará dividido en dos partes:",
+    "text": "17.1 AVISO GENERAL\nEste apartado se pregunta cada semestre y se encuentra dentro de la sección 3 de la encuesta de la ENSU, se aplico con excepcion en el tercer trimestre del 2020, debido a que no se ejecutó la ENSU del segundo trimestre por la emergencia sanitaria COVID-19.\nDe manera general se busca lo siguiente:\nLo anterior conforme a las siguientes 4 preguntas (2 por cada tipo de autoridad):\n- Para Servidores públicos:\n3.3 En los últimos seis meses, ¿usted realizó de forma directa algún trámite, pago o solicitud de servicio ante un (una) servidor(a) público(a) o empleado(a) de gobierno?\n3.4 En los últimos seis meses, ¿un (una) servidor(a) público(a) o empleado(a) de gobierno le insinuó, le pidió de forma directa o generó las condiciones para que le diera dinero, un regalo o favor para agilizar, aprobar o evitar los procedimientos?\n- Para autoridades de seguridad pública:\n3.5 En los últimos seis meses, ¿usted tuvo contacto directo con policías de tránsito, municipales, estatales u otras autoridades de seguridad pública por incidentes de tránsito, infracciones, detenciones por riñas, faltas a la moral o administrativas?\n3.6 En los últimos seis meses, ¿la policía u otra autoridad de seguridad pública le insinuó, le pidió de forma directa o generó las condiciones para que le diera dinero, un regalo o favor para agilizar, aprobar, o bien, evitar infracciones o detenciones?\nLas 4 preguntas permiten las respuestas: sí (1), no (2) y no sabe / no responde (9).\nDado que las segundas preguntas de cada tipo de autoridad se responden solo si en la primer pregunta al respuesta fue afirmativa, se debe de entender que el porcentaje no representa el 100% de la muestra sino que es solo de la parte que contestó que sí tuvo contacto directo con una autoridad, por ejemplo:\n- Para el 4to trimestre del 2024 (segundo semestre de 2024), 14% de la población encuestada (1 de cada 10 personas) indicó que sí tuvo contacto con una autoridad de seguridad pública, y de ese 14% si lo llevamos al 100%, entonces 47.2% de los que contestaron que “sí” experimentaron una situación de corrupción con dicha autoridad.\nLos resultados de este apartado pueden ser corroborados en los tabulados complementarios de la ENSU de los trimestres pares, especificamente en los archivos con la siguiente nomenclatura: 11.Bas_corrupcion_servidores_autoridades_MES_ANIO_est.\nPor todo lo anterior, el presente reporte estará dividido en dos partes:",
     "crumbs": [
       "Corrupción en servidores públicos y autoridades de seguridad pública",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Corrupción en servidores públicos y autoridades de seguridad pública</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Corrupción en servidores públicos y autoridades de seguridad pública</span>"
     ]
   },
   {
     "objectID": "libro/corrupcion.html#aviso-general",
     "href": "libro/corrupcion.html#aviso-general",
-    "title": "16  Corrupción en servidores públicos y autoridades de seguridad pública",
+    "title": "17  Corrupción en servidores públicos y autoridades de seguridad pública",
     "section": "",
     "text": "Si la población tuvo contacto directo con los servidores públicos y autoridades de seguridad pública.\nEn caso afirmativo, se pregunta si el encuestado sufrió algun acto de corrupción por parte de estas autoridades.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nServidores públicos\nAutoridades de seguridad pública",
     "crumbs": [
       "Corrupción en servidores públicos y autoridades de seguridad pública",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Corrupción en servidores públicos y autoridades de seguridad pública</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Corrupción en servidores públicos y autoridades de seguridad pública</span>"
     ]
   },
   {
     "objectID": "libro/corrupcion.html#servidores-públicos",
     "href": "libro/corrupcion.html#servidores-públicos",
-    "title": "16  Corrupción en servidores públicos y autoridades de seguridad pública",
-    "section": "16.2 Servidores públicos",
-    "text": "16.2 Servidores públicos\n\n16.2.1 2019 a 2025 a Nivel Nacional\n\n16.2.1.1 General\n\n\n\n\n\n\n\n\n16.2.1.2 Hombres\n\n\n\n\n\n\n\n\n16.2.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n16.2.2 2019 a 2025 por ciudades de interés y género\nPara una representación práctica de los datos, en la misma gráfica se incluyen los resultados de Contacto directo y experiencia de actos de corrupción, no obstante, hay que recordar que en el caso de corrupción, la lectura del dato es respecto al porcentaje de contacto directo. De acuerdo con los tabulados complementarios del INEGI:\nPara el 1er semestre del 2025, 31.1% de la población encuestada (3 de cada 10 personas) indicó que sí tuvo contacto con un servidor público, y de ese 31.1% si lo llevamos al 100%, entonces 8.9% de los que contestaron que “sí” experimentaron una situación de corrupción con dicha autoridad.\n\n16.2.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n16.2.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n16.2.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n16.2.3 2019 a 2025 Ciudad de México\n\n16.2.3.1 General - contacto directo\n\n\n\n\n\n\n\n\n16.2.3.2 General - experiencia de algun acto de corrupción\n\n\n\n\n\n\n\n\n16.2.3.3 Hombres - contacto directo\n\n\n\n\n\n\n\n\n16.2.3.4 Hombres - experiencia de algun acto de corrupción\n\n\n\n\n\n\n\n\n16.2.3.5 Mujeres - contacto directo\n\n\n\n\n\n\n\n\n16.2.3.6 Mujeres - experiencia de algun acto de corrupción",
+    "title": "17  Corrupción en servidores públicos y autoridades de seguridad pública",
+    "section": "17.2 Servidores públicos",
+    "text": "17.2 Servidores públicos\n\n17.2.1 2019 a 2025 a Nivel Nacional\n\n17.2.1.1 General\n\n\n\n\n\n\n\n\n17.2.1.2 Hombres\n\n\n\n\n\n\n\n\n17.2.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n17.2.2 2019 a 2025 por ciudades de interés y género\nPara una representación práctica de los datos, en la misma gráfica se incluyen los resultados de Contacto directo y experiencia de actos de corrupción, no obstante, hay que recordar que en el caso de corrupción, la lectura del dato es respecto al porcentaje de contacto directo. De acuerdo con los tabulados complementarios del INEGI:\nPara el 1er semestre del 2025, 31.1% de la población encuestada (3 de cada 10 personas) indicó que sí tuvo contacto con un servidor público, y de ese 31.1% si lo llevamos al 100%, entonces 8.9% de los que contestaron que “sí” experimentaron una situación de corrupción con dicha autoridad.\n\n17.2.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n17.2.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n17.2.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n17.2.3 2019 a 2025 Ciudad de México\n\n17.2.3.1 General - contacto directo\n\n\n\n\n\n\n\n\n17.2.3.2 General - experiencia de algun acto de corrupción\n\n\n\n\n\n\n\n\n17.2.3.3 Hombres - contacto directo\n\n\n\n\n\n\n\n\n17.2.3.4 Hombres - experiencia de algun acto de corrupción\n\n\n\n\n\n\n\n\n17.2.3.5 Mujeres - contacto directo\n\n\n\n\n\n\n\n\n17.2.3.6 Mujeres - experiencia de algun acto de corrupción",
     "crumbs": [
       "Corrupción en servidores públicos y autoridades de seguridad pública",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Corrupción en servidores públicos y autoridades de seguridad pública</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Corrupción en servidores públicos y autoridades de seguridad pública</span>"
     ]
   },
   {
     "objectID": "libro/corrupcion.html#autoridades-de-seguridad-pública",
     "href": "libro/corrupcion.html#autoridades-de-seguridad-pública",
-    "title": "16  Corrupción en servidores públicos y autoridades de seguridad pública",
-    "section": "16.3 Autoridades de seguridad pública",
-    "text": "16.3 Autoridades de seguridad pública\n\n16.3.1 2019 a 2025 a Nivel Nacional\n\n16.3.1.1 General\n\n\n\n\n\n\n\n\n16.3.1.2 Hombres\n\n\n\n\n\n\n\n\n16.3.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n16.3.2 2019 a 2025 por ciudades de interés y género\n\n16.3.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n16.3.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n16.3.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n16.3.3 2019 a 2025 Ciudad de México\n\n16.3.3.1 General - contacto directo\n\n\n\n\n\n\n\n\n16.3.3.2 General - experiencia de algun acto de corrupción\n\n\n\n\n\n\n\n\n16.3.3.3 Hombres - contacto directo\n\n\n\n\n\n\n\n\n16.3.3.4 Hombres - experiencia de algun acto de corrupción\n\n\n\n\n\n\n\n\n16.3.3.5 Mujeres - contacto directo\n\n\n\n\n\n\n\n\n16.3.3.6 Mujeres - experiencia de algun acto de corrupción",
+    "title": "17  Corrupción en servidores públicos y autoridades de seguridad pública",
+    "section": "17.3 Autoridades de seguridad pública",
+    "text": "17.3 Autoridades de seguridad pública\n\n17.3.1 2019 a 2025 a Nivel Nacional\n\n17.3.1.1 General\n\n\n\n\n\n\n\n\n17.3.1.2 Hombres\n\n\n\n\n\n\n\n\n17.3.1.3 Mujeres\n\n\n\n\n\n\n\n\n\n17.3.2 2019 a 2025 por ciudades de interés y género\n\n17.3.2.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n17.3.2.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n17.3.2.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres\n\n\n\n\n\n\n\n\n17.3.3 2019 a 2025 Ciudad de México\n\n17.3.3.1 General - contacto directo\n\n\n\n\n\n\n\n\n17.3.3.2 General - experiencia de algun acto de corrupción\n\n\n\n\n\n\n\n\n17.3.3.3 Hombres - contacto directo\n\n\n\n\n\n\n\n\n17.3.3.4 Hombres - experiencia de algun acto de corrupción\n\n\n\n\n\n\n\n\n17.3.3.5 Mujeres - contacto directo\n\n\n\n\n\n\n\n\n17.3.3.6 Mujeres - experiencia de algun acto de corrupción",
     "crumbs": [
       "Corrupción en servidores públicos y autoridades de seguridad pública",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Corrupción en servidores públicos y autoridades de seguridad pública</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Corrupción en servidores públicos y autoridades de seguridad pública</span>"
     ]
   },
   {
     "objectID": "libro/confianza.html",
     "href": "libro/confianza.html",
-    "title": "17  Confianza en los niveles de Gobierno",
+    "title": "18  Confianza en los niveles de Gobierno",
     "section": "",
-    "text": "17.1 AVISO GENERAL",
+    "text": "18.1 AVISO GENERAL",
     "crumbs": [
       "Confianza en los niveles de gobierno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
     ]
   },
   {
     "objectID": "libro/confianza.html#a-2025-a-nivel-nacional",
     "href": "libro/confianza.html#a-2025-a-nivel-nacional",
-    "title": "17  Confianza en los niveles de Gobierno",
-    "section": "17.2 2019 a 2025 a Nivel Nacional",
-    "text": "17.2 2019 a 2025 a Nivel Nacional\n\n17.2.1 General\n\n\n17.2.2 Hombres\n\n\n17.2.3 Mujeres",
+    "title": "18  Confianza en los niveles de Gobierno",
+    "section": "18.2 2019 a 2025 a Nivel Nacional",
+    "text": "18.2 2019 a 2025 a Nivel Nacional\n\n18.2.1 General\n\n\n18.2.2 Hombres\n\n\n18.2.3 Mujeres",
     "crumbs": [
       "Confianza en los niveles de gobierno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
     ]
   },
   {
     "objectID": "libro/confianza.html#a-2025-por-ciudades-de-interés-y-género",
     "href": "libro/confianza.html#a-2025-por-ciudades-de-interés-y-género",
-    "title": "17  Confianza en los niveles de Gobierno",
-    "section": "17.3 2019 a 2025 por ciudades de interés y género",
-    "text": "17.3 2019 a 2025 por ciudades de interés y género\n\n17.3.1 General\n\n\n17.3.2 Hombres\n\n\n17.3.3 Mujeres",
+    "title": "18  Confianza en los niveles de Gobierno",
+    "section": "18.3 2019 a 2025 por ciudades de interés y género",
+    "text": "18.3 2019 a 2025 por ciudades de interés y género\n\n18.3.1 General\n\n\n18.3.2 Hombres\n\n\n18.3.3 Mujeres",
     "crumbs": [
       "Confianza en los niveles de gobierno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
     ]
   },
   {
     "objectID": "libro/confianza.html#a-2025-ciudad-de-méxico",
     "href": "libro/confianza.html#a-2025-ciudad-de-méxico",
-    "title": "17  Confianza en los niveles de Gobierno",
-    "section": "17.4 2019 a 2025 Ciudad de México",
-    "text": "17.4 2019 a 2025 Ciudad de México\n\n17.4.1 General\n\n\n17.4.2 Hombres\n\n\n17.4.3 Mujeres",
+    "title": "18  Confianza en los niveles de Gobierno",
+    "section": "18.4 2019 a 2025 Ciudad de México",
+    "text": "18.4 2019 a 2025 Ciudad de México\n\n18.4.1 General\n\n\n18.4.2 Hombres\n\n\n18.4.3 Mujeres",
     "crumbs": [
       "Confianza en los niveles de gobierno",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
     ]
   },
   {
     "objectID": "libro/acoso.html",
     "href": "libro/acoso.html",
-    "title": "18  Acoso y violencia sexual",
+    "title": "19  Acoso y violencia sexual",
     "section": "",
-    "text": "18.1 AVISO GENERAL",
+    "text": "19.1 AVISO GENERAL",
     "crumbs": [
       "Acoso y violencia sexual",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Acoso y violencia sexual</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Acoso y violencia sexual</span>"
     ]
   },
   {
     "objectID": "libro/acoso.html#a-2025-a-nivel-nacional",
     "href": "libro/acoso.html#a-2025-a-nivel-nacional",
-    "title": "18  Acoso y violencia sexual",
-    "section": "18.2 2019 a 2025 a Nivel Nacional",
-    "text": "18.2 2019 a 2025 a Nivel Nacional\n\n18.2.1 General\n\n\n18.2.2 Hombres\n\n\n18.2.3 Mujeres",
+    "title": "19  Acoso y violencia sexual",
+    "section": "19.2 2019 a 2025 a Nivel Nacional",
+    "text": "19.2 2019 a 2025 a Nivel Nacional\n\n19.2.1 General\n\n\n19.2.2 Hombres\n\n\n19.2.3 Mujeres",
     "crumbs": [
       "Acoso y violencia sexual",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Acoso y violencia sexual</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Acoso y violencia sexual</span>"
     ]
   },
   {
     "objectID": "libro/acoso.html#a-2025-por-ciudades-de-interés-y-género",
     "href": "libro/acoso.html#a-2025-por-ciudades-de-interés-y-género",
-    "title": "18  Acoso y violencia sexual",
-    "section": "18.3 2019 a 2025 por ciudades de interés y género",
-    "text": "18.3 2019 a 2025 por ciudades de interés y género\n\n18.3.1 General\n\n\n18.3.2 Hombres\n\n\n18.3.3 Mujeres",
+    "title": "19  Acoso y violencia sexual",
+    "section": "19.3 2019 a 2025 por ciudades de interés y género",
+    "text": "19.3 2019 a 2025 por ciudades de interés y género\n\n19.3.1 General\n\n\n19.3.2 Hombres\n\n\n19.3.3 Mujeres",
     "crumbs": [
       "Acoso y violencia sexual",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Acoso y violencia sexual</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Acoso y violencia sexual</span>"
     ]
   },
   {
     "objectID": "libro/acoso.html#a-2025-ciudad-de-méxico",
     "href": "libro/acoso.html#a-2025-ciudad-de-méxico",
-    "title": "18  Acoso y violencia sexual",
-    "section": "18.4 2019 a 2025 Ciudad de México",
-    "text": "18.4 2019 a 2025 Ciudad de México\n\n18.4.1 General\n\n\n18.4.2 Hombres\n\n\n18.4.3 Mujeres",
+    "title": "19  Acoso y violencia sexual",
+    "section": "19.4 2019 a 2025 Ciudad de México",
+    "text": "19.4 2019 a 2025 Ciudad de México\n\n19.4.1 General\n\n\n19.4.2 Hombres\n\n\n19.4.3 Mujeres",
     "crumbs": [
       "Acoso y violencia sexual",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Acoso y violencia sexual</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Acoso y violencia sexual</span>"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Análisis de la Encuesta Nacional de Seguridad Pública Urbana (ENSU) del INEGI (2019-2T2025)",
+    "objectID": "libro/references.html",
+    "href": "libro/references.html",
+    "title": "Referencias",
     "section": "",
-    "text": "Introducción\nLa Encuesta Nacional de Seguridad Pública Urbana (ENSU) del Instituto Nacional de Estadística, Geografía e Informática (INEGI 2025), tiene como objetivo principal realizar estimaciones de la percepción de la población sobre la seguridad pública en ciudades de interés Nacional, los datos se publican trimestralmente y comenzó a realizarse a partir del tercer trimestre del 2013, y a lo largo del tiempo, se han tenido entre 70 (primer trimtres de 2019) a 91 ciudades de interés (segundo trimestre del 2025).\nA continuación, se muestra una tabla con cada una de las ciudades de cada ENSU que se analizaron para la creación de este documento:",
+    "text": "INEGI. 2025. “Encuesta Nacional de Seguridad Pública Urbana\n(ENSU), Primer Trimestre de 2019 a Segundo Trimestre de 2025.”\nENSU. https://www.inegi.org.mx/programas/ensu/.",
     "crumbs": [
-      "Introducción"
-    ]
-  },
-  {
-    "objectID": "index.html#metodología",
-    "href": "index.html#metodología",
-    "title": "Análisis de la Encuesta Nacional de Seguridad Pública Urbana (ENSU) del INEGI (2019-2T2025)",
-    "section": "Metodología",
-    "text": "Metodología\nSe descargaron las bases de datos, del 2019 al 2025 por trimestre, de la Encuesta Nacional de Seguridad Pública Urbana (ENSU) del Instituto Nacional de Estadística, Geografía e Informática (INEGI), trabajando especialmente con los conjutos de datos del cuestionario principal de la ENSU (terminación CB), que son las preguntas enfocadas a obtener información sobre la percepción de la población de 18 años y más, acerca de la situación de seguridad pública en el ámbito urbano.\nSe descargaron las bases de datos del cuestionario sociodemográfico para el 2019 y el primer trimestre del 2020, ya que dichos periodos, esos cuestionarios contienen los valores de sexo y edad.\nTambién, se descargó el catálogo de las Claves Geoestadísticas (CVEGEO) de todos los municipios del país y el Catálogo de Ciudades (estandarizado con lo reportado en el segundo trimestre del 2025), con el fin de homogenizar los nombres de las ENTIDADES, MUNICIPIOS y CIUDADES de las bases de datos, ya que no es lo mismo “Cuajimalpa” que “Cuajimalpa de Morelos”, o bien, “México” que “Estado de México”, y si vamos a comparar diversos años, lo importante es estandarizar esos datos. Además, se agregaron siglas de cada ciudad que usa el INEGI para su representación en algunos documentos como los resultados de la ENSU del cuarto trimestre del 2024.\nDespués al catálogo de ciudades del segundo trimestre del 2025, se agregaron todas las ciudades que han sido evaluadas desde el 2019, que por diferentes motivos como la regionalización de la CDMX o el trabajo por Convenios entre el INEGI con otros municipios, el catálogo ha ido creciendo con el tiempo.\nSe crearon diversas funciones para:\n\nAutomatización de carga de datos (31 archivos en total, siendo 26 de los cuestionarios tipo CB y 5 para los tipo CS).\nCreación de tablas resumen para la recreación de las gráficas de la ENSU.\n\nAdemás, en diversas secciones del presente reporte, se hace mención que los resultados pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 1.Com_percepcion_MES_ANIO_est. No obstante, estos tabulados solo abarcan de 2024 a 2025 y algunos pueden encontrarse en los tabulados básicos de años anteriores, por lo que para obtener y replicar los resultados del presente hacia el pasado, se elaboraron diversas funciones dentro de las cuales se pudieron obtener los datos esperados para los tabulados complementarios de los años faltantes.\nTodos los documentos empleados pueden consultarse en el repositorio.\nTambién, se hicieron correcciones breves (sin alterar los documentos originales), a los archivos CS y CB del INEGI, en el sentido de que algunos presentaban inconsistencias como:\n\nRetorno de carro (’).\nUso de valores literalmente escritos como NA en columnas de tipo integer.\nSeparación de variables BP1_6_X para los trimestres impares y pares.\nFalta de homogenización de los nombres de las ciudades evaluadas.\n\nAsí mismo, se realizaron actividades como: - Renombre de variables BP2_4_X para que todos los df sean iguales. - Unión de columnas de SEXO y EDAD entre los data frames CS y CB, desde el año 2020 hacia el pasado. - Unión de columnas FAC_VIV entre los data frames CS y CB, desde el tercer trimestre del 2022 hacia el pasado. - Se agregaron columnas auxiliares como NOMGRAFICA (nombre de la ciudad de interés conforme al catálogo creado), NOM_ABR (nombre abreviado de la ciudad), ENT_ABR (abreviatura de la entidad federativa de la ciudad). - Se agregaron las columnas del año, periodo y nombre del df.",
-    "crumbs": [
-      "Introducción"
-    ]
-  },
-  {
-    "objectID": "index.html#secciones-contenidas-en-la-ensu",
-    "href": "index.html#secciones-contenidas-en-la-ensu",
-    "title": "Análisis de la Encuesta Nacional de Seguridad Pública Urbana (ENSU) del INEGI (2019-2T2025)",
-    "section": "Secciones contenidas en la ENSU",
-    "text": "Secciones contenidas en la ENSU\nFinalmente, tras una revisión exhaustiva de todas las Secciones evaluadas en cada Encuesta Nacional, se creó un organigrama respecto a la aparición de cada sección, este mismo orden será el que se presentará en cada capítulo del presente reporte, además de incluir primero la forma en la que se realizó el diseño muestral para replicar los resultados del INEGI. Las secciones son:\n\n\n\n\n\n\nDiseño muestral, ubicado en:\n\n1  Diseño muestral\n\nPercepción sobre seguridad pública, que abarca:\n\n2  Percepción de inseguridad en áreas urbanas de interés 3  Percepción de inseguridad por espacio físico específico 4  Expectativa social sobre seguridad pública 5  Atestiguación de tipos de conductas delictivas o antisociales 6  Cambio de hábitos por temor al delito\n\nFormas de enterarse sobre la situación de seguridad pública, ubicado en:\n\n7  Formas de enterarse sobre la situación de seguridad pública\n\nVictimización en el hogar, ubicado en:\n\n8  Victimización en el hogar\n\nPercepción sobre el desempeño de autoridades, ubicado en:\n\n9  Percepción sobre el desempeño de autoridades\n\nConflictos y conductas antisociales, que abarca:\n\n10  Conflictos o enfrentamientos 11  Conflictos directos (personas con quienes se tuvieron los conflictos) 12  Consecuencias de los conflictos\n\nDesempeño gubernamental, que abarca:\n\n13  Problemáticas urbanas 14  Efectividad del Gobierno para atender las problemáticas 15  Actividades o programas para prevenir la violencia y/o la delincuencia\n\nCorrupción en servidores públicos y autoridades de seguridad pública, ubicado en:\n\n16  Corrupción en servidores públicos y autoridades de seguridad pública\n\nConfianza en los niveles de gobierno, ubicado en:\n\n17  Confianza en los niveles de Gobierno\n\nAcoso y violencia sexual, ubicado en:\n\n18  Acoso y violencia sexual\n\n\n\n\nINEGI. 2025. «Encuesta Nacional de Seguridad Pública Urbana (ENSU), primer trimestre de 2019 a segundo trimestre de 2025». ENSU. https://www.inegi.org.mx/programas/ensu/.",
-    "crumbs": [
-      "Introducción"
-    ]
-  },
-  {
-    "objectID": "libro/desempenio.html#a-2025-a-nivel-nacional-1",
-    "href": "libro/desempenio.html#a-2025-a-nivel-nacional-1",
-    "title": "9  Percepción sobre el desempeño de autoridades",
-    "section": "9.2 2019 a 2025 a Nivel Nacional",
-    "text": "9.2 2019 a 2025 a Nivel Nacional\n\n9.2.1 General\n\n\n9.2.2 Hombres\n\n\n9.2.3 Mujeres",
-    "crumbs": [
-      "Percepción sobre el desempeño de autoridades",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades</span>"
-    ]
-  },
-  {
-    "objectID": "libro/desempenio.html#a-2025-por-ciudades-de-interés-y-género",
-    "href": "libro/desempenio.html#a-2025-por-ciudades-de-interés-y-género",
-    "title": "9  Percepción sobre el desempeño de autoridades",
-    "section": "9.3 2019 a 2025 por ciudades de interés y género",
-    "text": "9.3 2019 a 2025 por ciudades de interés y género\n\n9.3.1 General\n\n\n9.3.2 Hombres\n\n\n9.3.3 Mujeres",
-    "crumbs": [
-      "Percepción sobre el desempeño de autoridades",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades</span>"
-    ]
-  },
-  {
-    "objectID": "libro/desempenio.html#a-2025-ciudad-de-méxico",
-    "href": "libro/desempenio.html#a-2025-ciudad-de-méxico",
-    "title": "9  Percepción sobre el desempeño de autoridades",
-    "section": "9.4 2019 a 2025 Ciudad de México",
-    "text": "9.4 2019 a 2025 Ciudad de México\n\n9.4.1 General\n\n\n9.4.2 Hombres\n\n\n9.4.3 Mujeres",
-    "crumbs": [
-      "Percepción sobre el desempeño de autoridades",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades</span>"
+      "Referencias",
+      "Referencias"
     ]
   }
 ]
