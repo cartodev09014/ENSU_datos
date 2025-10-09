@@ -782,7 +782,7 @@
     "href": "libro/confianza.html",
     "title": "18  Confianza en los niveles de Gobierno",
     "section": "",
-    "text": "18.1 AVISO GENERAL",
+    "text": "18.1 AVISO GENERAL\nA partir de este capítulo, comienzan las Secciones IV que se preguntan en diferentes periodos del año, para el caso de la Confianza en los niveles de Gobierno, es una sola pregunta que se comenzó a realizar en cada trimestre impar desde 2023 y que ha tenido dos cambios en la forma de realizarse.\nFuente: [Encuesta Nacional de Seguridad Pública Urbana (2023). Encuesta Nacional de Seguridad Pública Urbana 2023 : ENSU : informe operativo : información complementaria al 1° trimestre / Instituto Nacional de Estadística y Geografía.– México : INEGI, c2023.]\nFuente: [Encuesta Nacional de Seguridad Pública Urbana (2025). Encuesta Nacional de Seguridad Pública Urbana 2025 : ENSU : informe operativo : información complementaria al 1° trimestre / Instituto Nacional de Estadística y Geografía.– México : INEGI, c2025.]\nDependiendo de si el periodo a evaluar es igual o antes de 1t24 tiene 12 opciones posibles de respuesta (00 a 10 y 99) y si es igual o después de 3t24 tiene 5 opciones posibles de respuesta (1 a 4 y 9).\nPara poder realizar un análisis histórico de la información disponible, se procedió a realizar una homologación de las categorías antiguas con las actuales, es decir, reestructurar a las 5 categorías actuales y además crear la sexta y séptima categoría, siendo estas: “Mucha o algo de confianza” y “Algo o mucha desconfianza”, para replicar los resultados que otorga el INEGI en sus tabulados. La homologación de las categorías antiguas se realiza conforme al reporte del INEGI del 1er trimestre de 2023 (página 76).\nPor lo que, para los reportes antiguos, se recategorizó según:\nLos resultados de este apartado pueden ser corroborados en los tabulados complementarios de la ENSU, especificamente en los archivos con la siguiente nomenclatura: 14.Com_confianza_niveles_gob_MES_ANIO_est. No obstante, se hace mención que esta pregunta comenzó a hacerse en la ENSU a partir del 1er trimestre de 2023.",
     "crumbs": [
       "Confianza en los niveles de gobierno",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
@@ -793,7 +793,7 @@
     "href": "libro/confianza.html#a-2025-a-nivel-nacional",
     "title": "18  Confianza en los niveles de Gobierno",
     "section": "18.2 2019 a 2025 a Nivel Nacional",
-    "text": "18.2 2019 a 2025 a Nivel Nacional\n\n18.2.1 General\n\n\n18.2.2 Hombres\n\n\n18.2.3 Mujeres",
+    "text": "18.2 2019 a 2025 a Nivel Nacional\n\n18.2.1 General\n\n\n\n\n\n\n\n\n18.2.2 Hombres\n\n\n\n\n\n\n\n\n18.2.3 Mujeres",
     "crumbs": [
       "Confianza en los niveles de gobierno",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
@@ -804,7 +804,7 @@
     "href": "libro/confianza.html#a-2025-por-ciudades-de-interés-y-género",
     "title": "18  Confianza en los niveles de Gobierno",
     "section": "18.3 2019 a 2025 por ciudades de interés y género",
-    "text": "18.3 2019 a 2025 por ciudades de interés y género\n\n18.3.1 General\n\n\n18.3.2 Hombres\n\n\n18.3.3 Mujeres",
+    "text": "18.3 2019 a 2025 por ciudades de interés y género\n\n18.3.1 General\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - General\n\n\n\n\n\n\n\n18.3.2 Hombres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Hombres\n\n\n\n\n\n\n\n18.3.3 Mujeres\n\n\n\n\n\n\nPara realizar una comparación entre ciudades se puede recurrir al uso del siguiente gráfico, seleccionando la ciudad de interés.\n\n\n\nMostrar gráfica 2 - Mujeres",
     "crumbs": [
       "Confianza en los niveles de gobierno",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
@@ -815,7 +815,7 @@
     "href": "libro/confianza.html#a-2025-ciudad-de-méxico",
     "title": "18  Confianza en los niveles de Gobierno",
     "section": "18.4 2019 a 2025 Ciudad de México",
-    "text": "18.4 2019 a 2025 Ciudad de México\n\n18.4.1 General\n\n\n18.4.2 Hombres\n\n\n18.4.3 Mujeres",
+    "text": "18.4 2019 a 2025 Ciudad de México\n\n18.4.1 General\n\n\n\n\n\n\n\n\n18.4.2 Hombres\n\n\n\n\n\n\n\n\n18.4.3 Mujeres",
     "crumbs": [
       "Confianza en los niveles de gobierno",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
@@ -885,6 +885,17 @@
     "crumbs": [
       "Percepción sobre el desempeño de autoridades",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Percepción sobre el desempeño de autoridades (identificación y confianza)</span>"
+    ]
+  },
+  {
+    "objectID": "libro/confianza.html#aviso-general",
+    "href": "libro/confianza.html#aviso-general",
+    "title": "18  Confianza en los niveles de Gobierno",
+    "section": "",
+    "text": "Pregunta original (1er trimestre 2023 a 1er trimestre de 2024)\n\n\n\n\n\n\n\n\nPregunta actual (3er trimestre 2023 - actualidad)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n00 a 03 como Mucha desconfianza\n04 a 05 como Algo de desconfianza\n06 a 07 como Algo de confianza\n08 a 10 como Mucha confianza\n99 como No sabe / no responde\n00 a 05 como Mucha o algo de confianza\n06 a 10 como Algo o mucha desconfianza",
+    "crumbs": [
+      "Confianza en los niveles de gobierno",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Confianza en los niveles de Gobierno</span>"
     ]
   }
 ]
