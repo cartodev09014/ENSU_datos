@@ -4,7 +4,7 @@
 
 - Los datos contenidos en la carpeta `./INEGI/` son propiedad del Instituto Nacional de Estadística y Geografía (INEGI), conforme a los [Términos de uso](https://www.inegi.org.mx/inegi/terminos.html). La consulta y descarga de los datos puede encontrarse en el siguiente link: https://www.inegi.org.mx/programas/ensu/
 
-- Fuente: INEGI. Encuesta Nacional de Seguridad Pública Urbana (ENSU), primer trimestre de 2019 a tercer trimestre de 2025.
+- Fuente: INEGI. Encuesta Nacional de Seguridad Pública Urbana (ENSU), primer trimestre de 2019 a cuarto trimestre de 2025.
 
 ## AVISO
 
@@ -44,6 +44,7 @@ Carpeta del proyecto en R
  ┃ ┃ ┣ 📄ENSU_CB_1222.csv
  ┃ ┃ ┣ 📄ENSU_CB_1222.csv
  ┃ ┃ ┣ 📄ENSU_CB_1224.csv
+ ┃ ┃ ┣ 📄ENSU_CB_1225.csv
  ┃ ┃ ┣ 📄ENSU_CS_0319.csv
  ┃ ┃ ┣ 📄ENSU_CS_0320.csv
  ┃ ┃ ┣ 📄ENSU_CS_0321.csv
